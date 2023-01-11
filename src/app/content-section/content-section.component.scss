@@ -1,0 +1,62 @@
+.main {
+    padding: 10px 0px 10px 10px;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 10px;
+    column-gap: 12px;
+    row-gap: 30px;
+}
+
+.grid-item {
+    background-color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    border-color: transparent;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+}
+
+.grid-item:hover {
+    transform: scale(1.2);
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.description {
+    display: flex;
+    margin: 5px 0px;
+}
+
+.fa-user-circle {
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+.info {
+    margin: 0px 15px;
+}
+
+.info p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    color: #606060;
+    margin: 0px;
+}
+
+.info > p:first-child {
+    font-size: 14px;
+    color: black;
+    padding: 5px 0px;
+}

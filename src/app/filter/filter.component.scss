@@ -1,0 +1,23 @@
+.filter {
+    padding: 10px 0px 10px 10px;
+    overflow: hidden;
+}
+
+.filter button {
+    font-size: 14px;
+    margin-right: 7px;
+    background-color: #f2f2f2;
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#all {
+    background-color: black;
+    color: white;
+}
+
+.filter button:hover {
+    background-color: #e5e5e5;
+}
