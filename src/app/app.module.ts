@@ -8,7 +8,6 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { FilterComponent } from './filter/filter.component';
 import { VideoCardComponent } from './video-card/video-card.component';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { TestComponent } from './test/test.component';
     SideBarComponent,
     ContentSectionComponent,
     FilterComponent,
-    VideoCardComponent,
-    TestComponent
+    VideoCardComponent
   ],
   imports: [
     BrowserModule,
