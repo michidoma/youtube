@@ -36,6 +36,16 @@ nav {
     cursor: pointer;
 }
 
+// #check {
+//     position: absolute;
+//     margin: 3px 0px 0px 20px;
+//     height: 30px;
+//     width: 30px;
+//     border-radius: 20px;
+
+//     z-index: -2;
+// }
+
 .menu img {
     cursor: pointer;
     padding: 10px 0px;
@@ -107,7 +117,7 @@ nav {
     margin-right: 5px;
 }
 
-.menu i:hover, .hamburger:hover, #voice:hover, .recommendation button:hover {
+.menu i:hover, .hamburger:hover, #voice:hover, .recommendation button:hover, .invisible div:hover {
     background-color: #e5e5e5;
 }
 
@@ -160,7 +170,7 @@ section {
     padding: 15px;
 }
 
-.option:hover, #home {
+.option:hover, #home, .invisible div {
     background-color: #f2f2f2;
 }
 
@@ -245,12 +255,39 @@ section {
     cursor: pointer;
 }
 
+.invisible div {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
 .invisible {
+    padding: 5px;
     display: none;
+}
+
+.invisible div img {
+    height: 50%;
+    border-radius: 0px;
+    margin-right: 5px;
+    width: auto;
+}
+
+.invisible div p {
+    font-size: 10px;
+
 }
 
 .grid-item:hover {
     transform: scale(1.2);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .invisible {
+        display: block;
+    }
 }
 
 .grid-item img {
@@ -261,6 +298,10 @@ section {
 .description {
     display: flex;
     margin: 5px 0px;
+}
+
+.description div:first-child {
+    margin-left: 15px;
 }
 
 .fa-user-circle {

@@ -1,1 +1,25 @@
-<p>video-card works!</p>
+<div class="grid-item">
+    <div>
+        <img src={{vCart?.thumbnail}}  alt="">
+    </div>
+    <div class="description">
+        <div>
+            <i class="fa fa-user-circle" title={{vCart?.channelName}}></i>
+        </div>
+        <div class="info">
+            <p title="{{vCart?.title}}"><b>{{vCart?.title}}</b></p>
+            <p title="{{vCart?.channelName}}">{{vCart?.channelName}}</p>
+            <p>{{vCart?.desc}}</p>
+        </div>
+    </div>
+    <div class="invisible">
+        <div class="" title="Music">
+            <img src="../../assets/img/music.png">
+            <p><b>Watch later</b></p>
+        </div>
+        <div class="" title="Music">
+            <img src="../../assets/img/music.png">
+            <p><b>Add to queue</b></p>
+        </div>
+    </div>
+</div>
