@@ -8,6 +8,11 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { FilterComponent } from './filter/filter.component';
 import { VideoCardComponent } from './video-card/video-card.component';
+import { HomeComponent } from './home/home.component';
+import { WatchComponent } from './watch/watch.component';
+import { DetailsComponent } from './details/details.component';
+import { SideRecommendComponent } from './side-recommend/side-recommend.component';
+import { SideVideoCardComponent } from './side-video-card/side-video-card.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,15 @@ import { VideoCardComponent } from './video-card/video-card.component';
     SideBarComponent,
     ContentSectionComponent,
     FilterComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    HomeComponent,
+    WatchComponent,
+    DetailsComponent,
+    SideRecommendComponent,
+    SideVideoCardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

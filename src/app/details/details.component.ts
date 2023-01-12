@@ -1,20 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
 import { card } from '../models/card';
 
 @Component({
-  selector: 'app-content-section',
-  templateUrl: './content-section.component.html',
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styles: [],
 })
-export class ContentSectionComponent {
-  constructor(private _router: Router) {}
-
-  navigateToHome() {
-    this._router.navigate(['home']);
-  }
-  navigateToWatch() {
-    this._router.navigateByUrl('/watch');
-  }
+export class DetailsComponent {
+  @Input() id: any;
 
   contents: card[] = [
     {
@@ -50,7 +43,7 @@ export class ContentSectionComponent {
       channelName: 'Gej Yu Ve?',
       channelProfile:
         'https://yt3.ggpht.com/oYmh_vAg_RMbv3BQWPhobyD8S0UOwP5W0ZUJl30Hh911AKRDKe5JTxJC8FS1fuUvmRgObuyaaA=s88-c-k-c0x00ffffff-no-rj',
-      channelSubCount: '',
+      channelSubCount: '104K',
       title: 'Нүцгэн нүдээр Астрономи...',
       embed: 'https://www.youtube.com/embed/CL-f66Ks_yA',
       likeCount: '1.5K',

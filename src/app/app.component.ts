@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { card } from './models/card';
 
 @Component({
   selector: 'app-root',

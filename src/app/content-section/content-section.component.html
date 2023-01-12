@@ -1,8 +1,9 @@
 <div class="main">
     <app-filter></app-filter>
     <div class="grid-container">
-        <div *ngFor="let cont of contents">
-            <app-video-card [vCart]="cont" ></app-video-card>
+        <div *ngFor="let cont of contents; let i = index">
+            <app-video-card [itemData]="cont" [routerLink]="['/watch',i]"></app-video-card>
+            <!-- (click)="navigateToWatch() -->
         </div>
     </div>
 </div>
