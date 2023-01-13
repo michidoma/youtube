@@ -1,10 +1,12 @@
+import { SafeResourceUrl } from '@angular/platform-browser';
+
 export interface card {
   thumbnail: String;
   channelName: String;
   channelProfile: String;
   channelSubCount: String;
   title: String;
-  embed: String;
+  embed: SafeResourceUrl;
   likeCount: String;
   views: String;
   time: String;

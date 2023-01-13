@@ -1,25 +1,32 @@
 <div class="grid-item">
+  <div class="thumbnail">
+    <img src="{{ itemData?.thumbnail }}" alt="" />
+  </div>
+  <div class="description">
     <div>
-        <img src={{itemData?.thumbnail}}  alt="">
+      <img
+        src="{{ itemData?.channelProfile }}"
+        alt="{{ itemData?.channelName }}"
+      />
     </div>
-    <div class="description">
-        <div>
-            <img src={{itemData?.channelProfile}} alt={{itemData?.channelName}}>
-        </div>
-        <div class="info">
-            <p title="{{itemData?.title}}"><b>{{itemData?.title}}</b></p>
-            <p title="{{itemData?.channelName}}">{{itemData?.channelName}}</p>
-            <p>{{itemData?.desc}}</p>
-        </div>
+    <div class="info">
+      <p title="{{ itemData?.title }}">
+        <b>{{ itemData?.title }}</b>
+      </p>
+      <p title="{{ itemData?.channelName }}">{{ itemData?.channelName }}</p>
+      <p>{{ itemData?.views }} views · {{ itemData?.time }} ago</p>
     </div>
-    <div class="invisible">
-        <div>
-            <img src="https://img.icons8.com/material-outlined/24/1A1A1A/clock--v1.png"/>
-            <p><b>Watch later</b></p>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/7535/7535742.png">
-            <p><b>Add to queue</b></p>
-        </div>
+  </div>
+  <div class="invisible">
+    <div>
+      <img
+        src="https://img.icons8.com/material-outlined/24/1A1A1A/clock--v1.png"
+      />
+      <p><b>Watch later</b></p>
     </div>
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/7535/7535742.png" />
+      <p><b>Add to queue</b></p>
+    </div>
+  </div>
 </div>

@@ -1,10 +1,10 @@
 <div class="items">
-    <div class="thumbnail">
-        <img src="../assets/img/vid2.jpg" alt="">
-    </div>
-    <div class="detail">
-        <h3>I solved 541 Leetcode problems. But you need only 150.</h3>
-        <p>Power Couple</p>
-        <p>1M views • 2 months ago</p>
-    </div>
+  <div class="thumbnail">
+    <img src="{{ itemData.thumbnail }}" alt="" />
+  </div>
+  <div class="detail">
+    <h3>{{ itemData.title }}</h3>
+    <p>{{ itemData.channelName }}</p>
+    <p>{{ itemData.views }} views • {{ itemData.time }} ago</p>
+  </div>
 </div>

@@ -1,7 +1,17 @@
 <div class="side-recommendation">
-    <app-side-video-card></app-side-video-card>
-    <app-side-video-card></app-side-video-card>
-    <app-side-video-card></app-side-video-card>
-    <app-side-video-card></app-side-video-card>
-    <app-side-video-card></app-side-video-card>
+  <!-- <div>
+    <app-filter class="side-filter"></app-filter>
+  </div> -->
+  <div *ngFor="let cont of contents; let i = index">
+    <app-side-video-card
+      [itemData]="cont"
+      *ngIf="i != id"
+    ></app-side-video-card>
+  </div>
+  <div *ngFor="let cont of contents; let i = index">
+    <app-side-video-card
+      [itemData]="cont"
+      *ngIf="i != id"
+    ></app-side-video-card>
+  </div>
 </div>

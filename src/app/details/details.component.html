@@ -1,9 +1,6 @@
 <div class="details">
   <div>
-    <iframe
-      src="{{ contents[id].embed }}"
-      title="YouTube video player"
-    ></iframe>
+    <iframe [src]="contents[id].embed" title="YouTube video player"></iframe>
   </div>
   <div class="short-details">
     <div>
@@ -12,10 +9,7 @@
     <div class="top-row">
       <div class="channel">
         <div class="channel-info">
-          <img
-            src="{{ contents[id].channelProfile }}"
-            alt="{{ contents[id].channelName }}"
-          />
+          <img src="{{ contents[id].channelProfile }}" />
           <div>
             <a href="" title="{{ contents[id].channelName }}"
               ><strong>{{ contents[id].channelName }}</strong>
@@ -25,9 +19,7 @@
         </div>
         <div class="subscribe-button">
           <button>
-            <!-- <div><i class="fa fa-search"></i></div> -->
             <div><span>Subscribe</span></div>
-            <!-- <div><i class="fa fa-microphone"></i></div> -->
           </button>
         </div>
       </div>
@@ -37,7 +29,6 @@
             <div>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/5569/5569576.png"
-                alt=""
               />
             </div>
             <div>
@@ -72,11 +63,7 @@
         <div>
           <button id="dots">
             <div>
-              <img
-                height="20px"
-                width="20px"
-                src="https://img.icons8.com/ios-glyphs/30/null/more.png"
-              />
+              <img src="https://img.icons8.com/ios-glyphs/30/null/more.png" />
             </div>
           </button>
         </div>
@@ -87,21 +74,23 @@
         <div>
           <b
             ><span>{{ contents[id].views }} views&ensp;</span
-            ><span>5 days ago</span></b
+            ><span>{{ contents[id].time }} ago</span></b
           >
         </div>
-        <div>
-          More Wednesday Addams is on the way. Season 2 is coming, and Season 1
-          is now streaming, only on Netflix.
+        <div [ngClass]="{ 'line-clamp': !showMore }">
+          {{ contents[id].description }}
+          <p (click)="showMore = false"><b>Show less</b></p>
         </div>
-        <div>&nbsp;<b>Show more</b></div>
+        <div class="more" *ngIf="!showMore" (click)="showMore = true">
+          &nbsp;<b>Show more</b>
+        </div>
       </div>
     </div>
   </div>
   <div class="comment-section">
     <div class="header">
       <div class="sort">
-        <span>16,714 Comments</span>
+        <span>0 Comments</span>
         <button title="Sort comments">
           <i class="material-icons">sort</i>Sort by
         </button>
