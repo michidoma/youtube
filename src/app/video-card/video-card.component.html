@@ -1,19 +1,23 @@
 <div class="grid-item">
   <div class="thumbnail">
-    <img src="{{ itemData?.thumbnail }}" alt="" />
+    <!-- <iframe
+      src="https://www.youtube.com/embed/j_MuZmJNirw?controls=0"
+      frameborder="0"
+    ></iframe> -->
+    <img src="{{ itemData.thumbnail }}" alt="" />
   </div>
   <div class="description">
     <div>
       <img
-        src="{{ itemData?.channelProfile }}"
-        alt="{{ itemData?.channelName }}"
+        src="{{ itemData.channelProfile }}"
+        alt="{{ itemData.channelName }}"
       />
     </div>
     <div class="info">
-      <p title="{{ itemData?.title }}">
+      <p title="{{ itemData.title }}">
         <b>{{ itemData?.title }}</b>
       </p>
-      <p title="{{ itemData?.channelName }}">{{ itemData?.channelName }}</p>
+      <p title="{{ itemData?.channelName }}">{{ itemData.channelName }}</p>
       <p>{{ itemData?.views }} views · {{ itemData?.time }} ago</p>
     </div>
   </div>

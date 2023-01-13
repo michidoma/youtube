@@ -87,7 +87,7 @@ export class DetailsComponent {
       views: '55K',
       time: '3 weeks',
       description:
-        '22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다.',
+        '22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다. 22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다.',
     },
     {
       thumbnail: '../assets/img/vid5.jpg',
@@ -101,7 +101,7 @@ export class DetailsComponent {
       views: '1.5M',
       time: '4 weeks',
       description:
-        'Today we visit London, England and ask strangers how many languages they speak. Support my channel: 👉 https://www.patreon.com/thenewtravel',
+        'Today we visit London, England and ask strangers how many languages they speak. Support my channel: 👉 https://www.patreon.com/thenewtravel              Today we visit London, England and ask strangers how many languages they speak. Support my channel!',
     },
     {
       thumbnail: '../assets/img/vid6.jpg',
@@ -128,7 +128,8 @@ export class DetailsComponent {
       likeCount: '8.8K',
       views: '100K',
       time: '3 weeks',
-      description: "NewJeans (뉴진스) 'Ditto' // Slowed & Reverb",
+      description:
+        "NewJeans (뉴진스) 'Ditto' // Slowed & Reverb DISCLAIMER: This video and description contain affiliate links, which means that if you click on one of the product links, I’ll receive a small commission. This helps to support the channel and allows me to continue to make videos like this.",
     },
     {
       thumbnail: '../assets/img/vid8.jpg',

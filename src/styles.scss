@@ -290,8 +290,6 @@ body {
     border-color: #def1ff;
 }
 
-// 
-
 .watch {
     display: flex;
     justify-content: center;
@@ -553,6 +551,10 @@ body {
                 font-size: 14px;
                 color: black;
                 margin: 0px 0px 4px 0px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
             }
             p {
                 margin: 0px
@@ -566,13 +568,23 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
     .search-bar {
         float: right;
-    }
-    .search-bar input {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: #3a81dd;
+    }
+    .watch {
+        display: block;
+        margin-right: 0px;
+    }
+    .details {
+        width: calc(100% - 48px);
+        margin: 0px;
+        padding: 24px;
     }
 }
