@@ -140,11 +140,11 @@ body {
                 column-gap: 12px;
                 row-gap: 30px;
                 .grid-item {
+                    height: 250px;
                     background-color: white;
                     font-size: 30px;
                     border-radius: 15px;
                     border-color: transparent;
-                    transition: transform .2s;
                     cursor: pointer;
                     .thumbnail {
                         img {
@@ -184,43 +184,51 @@ body {
                             border-radius: 35px;
                         }
                     }
-                    .invisible {
-                        padding: 5px;
-                        display: none;
-                        div {
-                            background-color: #f2f2f2;
-                            display: flex;
-                            height: 25px;
-                            align-items: center;
-                            justify-content: center;
-                            border-radius: 15px;
-                            margin: 5px;
-                            cursor: pointer;
-                            img {
-                                height: 70%;
-                                border-radius: 0px;
-                                margin-right: 5px;
-                                width: auto;
-                            }
-                            p {
-                                font-size: 12px;
-                            }
-                        }
-                        div:hover {
-                            background-color: #e5e5e5;
-                        }
-                    }
-                }
-                .grid-item:hover {
-                    transform: scale(1.1);
-                    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                    z-index: 999;
-                    .invisible {
-                        display: block;
-                    }
+                    
                 }
             }
         }
+    }
+}
+
+.scale {
+    transition: transform .2s;
+    background-color: white;
+    border-radius: 15px;
+    border-color: transparent;
+    .invisible {
+        padding: 5px;
+        display: none;
+        div {
+            background-color: #f2f2f2;
+            display: flex;
+            height: 25px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            img {
+                height: 70%;
+                border-radius: 0px;
+                margin-right: 5px;
+                width: auto;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        div:hover {
+            background-color: #e5e5e5;
+        }
+    }
+}
+
+.scale:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .invisible {
+        display: block;
     }
 }
 
@@ -567,17 +575,88 @@ body {
     padding: 0px;
 }
 
-@media only screen and (max-width: 600px) {
-    .search-bar {
-        float: right;
-        display: none;
+.comments {
+    padding: 20px 0px;
+    .comment {
+        display: flex;
+        padding: 10px 0px;
+        .profile {
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+        .info {
+            width: 100%;
+            .user-info {
+                display: flex;
+                align-items: center;
+                .channel-name {
+                    font-size: 13px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+                .time {
+                    font-size: 12px;
+                    color: #606060;
+                    cursor: pointer;
+                }
+                .time:hover {
+                    color: black;
+                }
+            }
+            .user-comment {
+                padding: 7px 0px;
+                font-size: 14px;
+            }
+            .toolbar {
+                display: flex;
+                align-items: center;
+                img {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 20px;
+                    padding: 5px;
+                }
+                img:hover {
+                    background-color: #e5e5e5;
+                }
+                .like-count {
+                    font-size: 12px;
+                    margin-right: 8px;
+                    margin-left: 4px;
+                    color: #606060;
+                }
+                .reply {
+                    font-size: 12px;
+                    padding: 8px;
+                    margin-left: 20px;
+                    border-radius: 15px;
+                    cursor: pointer;
+                }
+                .reply:hover{
+                    background-color: #e5e5e5;
+                }
+            }
+            button {
+                padding: 6px 16px;
+                border-radius: 16px;
+                color: #0860D4;
+                background-color: transparent;
+                border-color: transparent;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #def1ff;
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    body {
-        background-color: #3a81dd;
-    }
     .watch {
         display: block;
         margin-right: 0px;
@@ -586,5 +665,33 @@ body {
         width: calc(100% - 48px);
         margin: 0px;
         padding: 24px;
+    }
+    .side-recommendation {
+        padding: 0px;
+        margin: -40px 24px 0px 24px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .search-bar {
+        float: right;
+        display: none;
+    }
+    .share button {
+        width: 40px;
+    }
+    .share span {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 580px){
+    #like img, #dislike img, #like span, .share img {
+        display: none;
+    }
+    #like, #dislike, .buttons .share button {
+        background-color: transparent;
+        height: 0;
     }
 }

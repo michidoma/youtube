@@ -13,6 +13,7 @@ import { WatchComponent } from './watch/watch.component';
 import { DetailsComponent } from './details/details.component';
 import { SideRecommendComponent } from './side-recommend/side-recommend.component';
 import { SideVideoCardComponent } from './side-video-card/side-video-card.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SideVideoCardComponent } from './side-video-card/side-video-card.compon
     DetailsComponent,
     SideRecommendComponent,
     SideVideoCardComponent,
+    CommentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
