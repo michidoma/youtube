@@ -1,7 +1,6 @@
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    max-width: 300px;
     nav {
         height: 40px;   
         display: flex;
@@ -296,224 +295,228 @@ body {
 .watch {
     display: flex;
     justify-content: center;
-    .details {
-        display: block;
-        width: 50vw;
-        margin-left: 24px;
-        padding-top: 24px;
-        padding-right: 24px;
-        justify-content: center;
-        iframe {
-            aspect-ratio: 16 / 9;
-            height: 100%;
-            width: 100%;
-            border: none;
+}
+
+.details {
+    display: block;
+    width: 50vw;
+    margin-left: 24px;
+    padding-top: 24px;
+    padding-right: 24px;
+    justify-content: center;
+}
+
+.details {
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+    .short-details {
+        margin-top: 12px;
+        margin-bottom: 24px;
+        h1 {
+            margin: 0;
+            font-size: 1.1rem;
         }
-        .short-details {
-            margin-top: 12px;
-            margin-bottom: 24px;
-            h1 {
-                margin: 0;
-                font-size: 1.1rem;
-            }
-            .top-row {
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            .channel {
                 display: flex;
-                justify-content: space-between;
-                .channel {
+                margin-top: 12px;
+                margin-right: 12px;
+                .channel-info {
                     display: flex;
-                    margin-top: 12px;
-                    margin-right: 12px;
-                    .channel-info {
-                        display: flex;
-                        align-items: center;
-                        img {
-                            height: 40px;
-                            width: 40px;
-                            border-radius: 20px;
-                            margin-right: 12px;
-                            cursor: pointer;
-                        }
-                        div {
-                            margin-right: 24px;
-                        }
-                        a {
-                            font-size: 15px;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            text-decoration: none;
-                            color: black;
-                        }
-                        p {
-                            color: #606060;
-                            font-size: 0.8rem;
-                            margin: 0;
-                            margin-right: 4px;
-                        }
+                    align-items: center;
+                    img {
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 20px;
+                        margin-right: 12px;
+                        cursor: pointer;
                     }
-                    .subscribe-button {
-                        margin: 0px;
-                        :hover{
-                            background-color: #272727;
-                        }
-                        button {
-                            display: flex;
-                            padding: 0px 16px;
-                            background-color: black;
-                            color: white;
-                            border: none;
-                            height: 36px;
-                            font-size: 14px;
-                            line-height: 36px;
-                            border-radius: 18px;
-                            margin: 4px 0px;
-                            cursor: pointer;
-                            .fa-search {
-                                margin: 0px 6px 0px -6px;
-                                font-size: 18px;
-                                width: 24px;
-                                height: 24px;
-                            }
-                            .fa-microphone {
-                                margin: 0px -6px 0px 6px;
-                                width: 24px;
-                                height: 24px;
-                                font-size: 18px;
-                            }
-                        }
+                    div {
+                        margin-right: 24px;
+                    }
+                    a {
+                        font-size: 15px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-decoration: none;
+                        color: black;
+                    }
+                    p {
+                        color: #606060;
+                        font-size: 0.8rem;
+                        margin: 0;
+                        margin-right: 4px;
                     }
                 }
-                .buttons {
-                    display: flex;
-                    float: right;
-                    margin-top: 12px;
-                    right: 0;
-                    justify-content: flex-end;
-                    div {
-                        display: flex;
-                    }
-                    #like {
-                        border-right: 1px solid #e2e2e2;
-                        border-radius: 18px 0px 0px 18px;
-                        img {
-                            height: 20px;
-                            width: 20px;
-                            margin: 0px 6px 0px -6px;
-                        }
-                    }
-                    #dislike {
-                        border-radius: 0px 18px 18px 0px;
-                        img {
-                            height: 20px;
-                            width: 20px;
-                        }
-                    }
-                    #dots {
-                        margin-left: 8px;
-                        padding: 0px;
-                        width: 36px;
-                        justify-content: center;
-                        img {
-                            width: 18px;
-                            height: 18px;
-                        }
-                    }
-                    .share button img {
-                        width: 20px;
-                        height: 20px;
-                        margin: 0px 6px 0px -6px;
+                .subscribe-button {
+                    margin: 0px;
+                    :hover{
+                        background-color: #272727;
                     }
                     button {
                         display: flex;
                         padding: 0px 16px;
+                        background-color: black;
+                        color: white;
                         border: none;
                         height: 36px;
                         font-size: 14px;
-                        border-radius: 18px;
                         line-height: 36px;
+                        border-radius: 18px;
                         margin: 4px 0px;
-                        align-items: center;
                         cursor: pointer;
-                        i {
-                            font-size: 20px;
+                        .fa-search {
+                            margin: 0px 6px 0px -6px;
+                            font-size: 18px;
                             width: 24px;
                             height: 24px;
                         }
-                    }
-                    button:hover {
-                        background-color: #e5e5e5;
+                        .fa-microphone {
+                            margin: 0px -6px 0px 6px;
+                            width: 24px;
+                            height: 24px;
+                            font-size: 18px;
+                        }
                     }
                 }
             }
-            .bottom-row {
+            .buttons {
+                display: flex;
+                float: right;
                 margin-top: 12px;
-                .description {
-                    display: block;
-                    padding: 12px;
-                    font-size: 0.9rem;
-                    line-height: 20px;
-                    border-radius: 20px;
-                    background-color: #f2f2f2;
-                    div {
-                        margin-left: 0;
-                        padding: 5px 0px;
+                right: 0;
+                justify-content: flex-end;
+                div {
+                    display: flex;
+                }
+                #like {
+                    border-right: 1px solid #e2e2e2;
+                    border-radius: 18px 0px 0px 18px;
+                    img {
+                        height: 20px;
+                        width: 20px;
+                        margin: 0px 6px 0px -6px;
                     }
-                    .line-clamp {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 2;
-                        overflow: hidden;
-                        -webkit-box-orient: vertical;
+                }
+                #dislike {
+                    border-radius: 0px 18px 18px 0px;
+                    img {
+                        height: 20px;
+                        width: 20px;
                     }
-                    p {
-                        margin: 10px 0px 0px 0px;
+                }
+                #dots {
+                    margin-left: 8px;
+                    padding: 0px;
+                    width: 36px;
+                    justify-content: center;
+                    img {
+                        width: 18px;
+                        height: 18px;
                     }
+                }
+                .share button img {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0px 6px 0px -6px;
+                }
+                button {
+                    display: flex;
+                    padding: 0px 16px;
+                    border: none;
+                    height: 36px;
+                    font-size: 14px;
+                    border-radius: 18px;
+                    line-height: 36px;
+                    margin: 4px 0px;
+                    align-items: center;
                     cursor: pointer;
-                }:hover {
+                    i {
+                        font-size: 20px;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                button:hover {
                     background-color: #e5e5e5;
                 }
             }
         }
-        .comment-section {
-            .header {
-                .sort {
+        .bottom-row {
+            margin-top: 12px;
+            .description {
+                display: block;
+                padding: 12px;
+                font-size: 0.9rem;
+                line-height: 20px;
+                border-radius: 20px;
+                background-color: #f2f2f2;
+                div {
+                    margin-left: 0;
+                    padding: 5px 0px;
+                }
+                .line-clamp {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                }
+                p {
+                    margin: 10px 0px 0px 0px;
+                }
+                cursor: pointer;
+            }:hover {
+                background-color: #e5e5e5;
+            }
+        }
+    }
+    .comment-section {
+        .header {
+            .sort {
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+                button {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 24px;
-                    button {
-                        display: flex;
-                        align-items: center;
-                        font-size: 15px;
-                        margin-left: 20px;
-                        background-color: transparent;
-                        border: none;
-                        cursor: pointer;
-                        i {
-                            font-size: 20px;
-                            margin-right: 5px;
-                        }
-                    }
-                }
-                .add-comment {
-                    display: flex;
-                    margin-right: 16px;
-                    img {
-                        width: 40px;
-                        height: 40px;
-                        margin-right: 16px;
-                    }
-                    input {
-                        width: 100%;
-                        height: 25px;
-                        color: #606060;
-                        font-size: 13px;
-                        border: none;
-                        border-bottom: 1px solid #e5e5e5;
+                    font-size: 15px;
+                    margin-left: 20px;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    i {
+                        font-size: 20px;
+                        margin-right: 5px;
                     }
                 }
             }
-            margin-bottom: 20px;
+            .add-comment {
+                display: flex;
+                margin-right: 16px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 16px;
+                }
+                input {
+                    width: 100%;
+                    height: 25px;
+                    color: #606060;
+                    font-size: 13px;
+                    border: none;
+                    border-bottom: 1px solid #e5e5e5;
+                }
+            }
         }
+        margin-bottom: 20px;
     }
-}
+} 
 
 .share, #clip {
     margin-left: 8px;
@@ -563,8 +566,13 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
     .search-bar {
         float: right;
+    }
+    .search-bar input {
         display: none;
     }
 }
