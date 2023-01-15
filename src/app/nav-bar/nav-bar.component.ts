@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
   constructor(private _router: Router) {}
-
+  message: boolean = true;
   navigateToHome() {
     this._router.navigate(['home']);
   }

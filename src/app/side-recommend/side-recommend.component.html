@@ -1,10 +1,8 @@
 <div class="side-recommendation">
-  <!-- <div>
-    <app-filter class="side-filter"></app-filter>
-  </div> -->
   <div *ngFor="let cont of contents; let i = index">
     <app-side-video-card
       [itemData]="cont"
+      [routerLink]="['/watch', i]"
       *ngIf="i != id"
     ></app-side-video-card>
   </div>

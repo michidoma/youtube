@@ -6,7 +6,8 @@ export interface card {
   channelProfile: String;
   channelSubCount: String;
   title: String;
-  embed: SafeResourceUrl;
+  embed: string;
+  safeEmbed: SafeResourceUrl;
   likeCount: String;
   views: String;
   time: String;

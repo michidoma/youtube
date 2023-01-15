@@ -1,6 +1,9 @@
 <div class="details">
   <div>
-    <iframe [src]="contents[id].embed" title="YouTube video player"></iframe>
+    <iframe
+      [src]="contents[id].safeEmbed"
+      title="YouTube video player"
+    ></iframe>
   </div>
   <div class="short-details">
     <div>
@@ -81,7 +84,7 @@
           {{ contents[id].description }}
           <p (click)="showMore = false"><b>Show less</b></p>
         </div>
-        <div class="more" *ngIf="!showMore" (click)="showMore = true">
+        <div *ngIf="!showMore" (click)="showMore = true">
           &nbsp;<b>Show more</b>
         </div>
       </div>
