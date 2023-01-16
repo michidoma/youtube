@@ -7,9 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styles: [],
 })
 export class WatchComponent implements OnInit {
-  id: String | undefined | null;
-  constructor(private route: ActivatedRoute) {}
+  id: string | undefined | null;
+  constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id');
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
   }
 }

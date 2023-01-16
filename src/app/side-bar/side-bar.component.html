@@ -1,6 +1,10 @@
 <div [ngClass]="!message ? 'left-panel' : 'side-closed'">
+  <div class="menu">
+    <i class="material-icons" (click)="message = !message">menu</i>
+    <img src="/../../assets/img/logo.png" title="Youtube Home" />
+  </div>
   <div>
-    <div class="option" (click)="message = !message" id="home" title="Home">
+    <div class="option" id="home" title="Home">
       <img
         src="https://img.icons8.com/material-sharp/24/null/home.png"
         alt="Home"

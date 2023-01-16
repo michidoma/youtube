@@ -8,6 +8,7 @@ export interface card {
   title: String;
   embed: string;
   safeEmbed: SafeResourceUrl;
+  gif: String;
   likeCount: String;
   views: String;
   time: String;
