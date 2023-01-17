@@ -10,7 +10,12 @@
   </div>
   <div class="search-bar">
     <div class="search-input">
-      <input type="text" placeholder="Search" />
+      <input
+        type="text"
+        placeholder="Search"
+        #box
+        (keydown.enter)="getValue(box.value)"
+      />
     </div>
     <button type="submit" id="search" title="Search">
       <i class="fa fa-search"></i>

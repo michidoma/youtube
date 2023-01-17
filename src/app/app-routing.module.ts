@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoriesResolver } from './categories/categories.resolver';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ResultsComponent } from './results/results.component';
 import { ResultsGuard } from './results/results.guard';
@@ -31,6 +32,11 @@ const routes: Routes = [
     component: ResultsComponent,
     resolve: { resultsData: ResultsResolver },
     canActivate: [ResultsGuard],
+  },
+  {
+    path: 'categories',
+    component: CategoriesComponent,
+    resolve: { catData: CategoriesResolver },
   },
   {
     path: 'profile',

@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { FilterComponent } from './filter/filter.component';
 import { VideoCardComponent } from './video-card/video-card.component';
@@ -17,14 +15,15 @@ import { SideVideoCardComponent } from './side-video-card/side-video-card.compon
 import { CommentComponent } from './comment/comment.component';
 import { ColorDirective } from './color.directive';
 import { ResultsComponent } from './results/results.component';
+
 import { DatePipe } from './date.pipe';
 import { NumberFormatPipe } from './number-format.pipe';
+import { SharedModule } from './modules/shared/shared.module';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    SideBarComponent,
     ContentSectionComponent,
     FilterComponent,
     VideoCardComponent,
@@ -38,8 +37,9 @@ import { NumberFormatPipe } from './number-format.pipe';
     ResultsComponent,
     DatePipe,
     NumberFormatPipe,
+    CategoriesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

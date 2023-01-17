@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { card } from 'src/app/models/card';
-import { contents } from '../content-section/content-section.component';
 
 @Component({
   selector: 'app-results',

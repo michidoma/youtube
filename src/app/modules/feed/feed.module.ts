@@ -4,7 +4,7 @@ import { SubscriptionsComponent } from './subscriptions/subscriptions.component'
 import { LibraryComponent } from './library/library.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ShortsComponent } from './shorts/shorts.component';
-import { FeedComponent } from './feed.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'library', pathMatch: 'full' },
@@ -14,12 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    SubscriptionsComponent,
-    LibraryComponent,
-    ShortsComponent,
-    FeedComponent,
-  ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  declarations: [SubscriptionsComponent, LibraryComponent, ShortsComponent],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
 })
 export class FeedModule {}
