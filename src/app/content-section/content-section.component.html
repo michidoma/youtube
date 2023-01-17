@@ -1,16 +1,18 @@
 <div class="main">
   <app-filter></app-filter>
   <div class="grid-container">
-    <div *ngFor="let cont of contents; let i = index">
+    <div *ngFor="let content of contents">
       <app-video-card
-        [itemData]="cont"
-        [routerLink]="['/watch', i]"
+        [itemData]="content"
+        [routerLink]="['/watch']"
+        [queryParams]="{ id: content.id, log: loggedIn }"
       ></app-video-card>
     </div>
-    <div *ngFor="let cont of contents; let i = index">
+    <div *ngFor="let content of contents">
       <app-video-card
-        [itemData]="cont"
-        [routerLink]="['/watch', i]"
+        [itemData]="content"
+        [routerLink]="['/watch']"
+        [queryParams]="{ id: content.id }"
       ></app-video-card>
     </div>
   </div>

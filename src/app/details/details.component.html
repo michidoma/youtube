@@ -1,28 +1,30 @@
 <div class="details">
   <div>
-    <iframe
-      [src]="contents[id].safeEmbed"
-      title="YouTube video player"
-    ></iframe>
+    <iframe [src]="content?.safeEmbed" title="YouTube video player"></iframe>
   </div>
   <div class="short-details">
     <div>
-      <h1>{{ contents[id].title }}</h1>
+      <h1>{{ content?.title }}</h1>
     </div>
     <div class="top-row">
       <div class="channel">
         <div class="channel-info">
-          <img src="{{ contents[id].channelProfile }}" />
+          <img src="{{ content?.channelProfile }}" />
           <div>
-            <a href="" title="{{ contents[id].channelName }}"
-              ><strong>{{ contents[id].channelName }}</strong>
+            <a href="" title="{{ content?.channelName }}"
+              ><strong>{{ content?.channelName }}</strong>
             </a>
-            <p>{{ contents[id].channelSubCount }} subscribers</p>
+            <p>{{ content?.channelSubCount }} subscribers</p>
           </div>
         </div>
-        <div class="subscribe-button">
-          <button>
+        <div class="subscribe" *ngIf="sub === false">
+          <button (click)="myClickHandler($event)">
             <div><span>Subscribe</span></div>
+          </button>
+        </div>
+        <div class="subscribe" id="logged" *ngIf="sub === true">
+          <button>
+            <div><span>Subscribed</span></div>
           </button>
         </div>
       </div>
@@ -35,7 +37,7 @@
               />
             </div>
             <div>
-              <span>{{ contents[id].likeCount }}</span>
+              <span>{{ content?.likeCount }}</span>
             </div>
           </button>
           <button id="dislike" title="I dislike this">
@@ -76,12 +78,12 @@
       <div class="description">
         <div>
           <b
-            ><span>{{ contents[id].views }} views&ensp;</span
-            ><span>{{ contents[id].time }} ago</span></b
+            ><span>{{ content?.views }} views&ensp;</span
+            ><span>{{ content?.time }} ago</span></b
           >
         </div>
         <div [ngClass]="{ 'line-clamp': !showMore }">
-          {{ contents[id].description }}
+          {{ content?.description }}
           <p (click)="showMore = false"><b>Show less</b></p>
         </div>
         <div *ngIf="!showMore" (click)="showMore = true">

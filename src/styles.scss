@@ -69,10 +69,20 @@ body {
         }
         .nav-right {
             display: flex;
-            img {
+            align-items: center;
+            .settings {
                 height: 20px;
                 padding: 10px;
                 border-radius: 20px;
+                cursor: pointer;
+            }
+            .user-profile {
+                height: 32px;
+                width: 32px;
+                border-radius: 20px;
+                margin-right: 10px;
+            }
+            :hover {
                 cursor: pointer;
             }
         }
@@ -145,8 +155,22 @@ body {
                     background-color: #e6e6e6;
                 }
             }
-            > div:nth-child(4) {
+            .sign-in {
                 padding: 0px 25px 15px 25px;
+            }
+            #subscriptions {
+                div {
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 24px;
+                    }
+                }
+                > p {
+                    margin: 0px;
+                    padding-left: 20px; 
+                    padding-bottom: 5px; 
+                }
             }
             > :nth-child(5) p {
                 margin: 0px;
@@ -444,7 +468,7 @@ body {
                         margin-right: 4px;
                     }
                 }
-                .subscribe-button {
+                .subscribe {
                     margin: 0px;
                     :hover{
                         background-color: #272727;
@@ -473,6 +497,15 @@ body {
                             height: 24px;
                             font-size: 18px;
                         }
+                    }
+                }
+                #logged {
+                    button {
+                        background-color: #f2f2f2;
+                        color: black;
+                    }
+                    button:hover, button div:hover, span:hover{
+                        background-color: #e5e5e5;
                     }
                 }
             }
@@ -616,21 +649,27 @@ body {
 }
 
 .side-recommendation {
-    width: 33vw;
+    width: 34vw;
     padding: 24px 24px 0px 0px;
     .items {
         display: flex;
         margin-bottom: 8px;
         cursor: pointer;
         .thumbnail {
+            display: flex;
             img {
                 height: 94px;
                 margin-right: 8px;
                 border-radius: 5px;
             }
+            .watch-later {
+                height: 24px;
+                width: 24px;
+                display: none;
+            }
         }
         .detail {
-            padding-right: 24px;
+            width: 100%;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             color: #606060;
@@ -651,6 +690,25 @@ body {
             p {
                 margin: 0px
             }
+        }
+        > div:last-child {
+            img {
+                height: 20px;
+                width: 20px;
+                border-radius: 12px;
+                padding: 3px;
+                display: none;
+                position: relative;
+                left: 30px;
+            }
+            img:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .items:hover {
+        #menu-hover {
+            display: block;
         }
     }
 }
@@ -736,6 +794,118 @@ body {
             button:hover {
                 background-color: #def1ff;
             }
+        }
+    }
+}
+
+.page-not-found {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: #333333;
+    > div {
+        height: 305px;
+        padding-top: calc((100vh - 305px)/2);
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        button {
+            height: 29px;
+            padding: 0px 25px;
+            border-radius: 0px;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+            i {
+                color: #a2a2a2;
+            }
+        }
+    }
+    img {
+        height: 25px;
+        padding: 5px;
+    }
+    .error-monkey {
+        width: 186px;
+        height: 174px;
+    }
+    .description {
+        padding: 5px 0px;
+    }
+    p {
+        line-height: 5px;
+    }
+    input {
+        font-size: 15px;
+        padding: 5px;
+        border-radius: 0px;
+        border: 1px solid #cccccc;
+    }
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    .items {
+        display: flex;
+        width: 450px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        .thumbnail {
+            display: flex;
+            img {
+                height: 100px;
+                margin-right: 16px;
+                border-radius: 10px;
+            }
+            .watch-later {
+                height: 24px;
+                width: 24px;
+                display: none;
+            }
+        }
+        .detail {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #606060;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            line-height: 20px;
+
+            h3 {
+                font-size: 18px;
+                color: black;
+                margin: 5px 8px 10px 0px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+            }
+            p {
+                margin: 0px
+            }
+        }
+        > div:last-child {
+            img {
+                height: 20px;
+                width: 20px;
+                border-radius: 12px;
+                padding: 3px;
+                display: none;
+            }
+            img:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .items:hover {
+        #menu-hover {
+            display: block;
         }
     }
 }

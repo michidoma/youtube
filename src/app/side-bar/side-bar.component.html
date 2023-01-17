@@ -11,11 +11,15 @@
       />
       <p>Home</p>
     </div>
-    <div class="option shorts" title="Shorts">
+    <div class="option shorts" title="Shorts" [routerLink]="['/feed/shorts']">
       <img src="../../assets/img/shorts.png" alt="Shorts" />
       <p>Shorts</p>
     </div>
-    <div class="option" title="Subscriptions">
+    <div
+      class="option"
+      title="Subscriptions"
+      [routerLink]="['/feed/subscriptions']"
+    >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989849.png"
         alt="Subscriptions"
@@ -24,7 +28,7 @@
     </div>
   </div>
   <div>
-    <div class="option" title="Library">
+    <div class="option" title="Library" [routerLink]="['/feed/library']">
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989835.png"
         alt="Library"
@@ -39,11 +43,32 @@
       <p>History</p>
     </div>
   </div>
-  <div>
+  <div *ngIf="log != 1" class="sign-in">
     <p>Sign in to like videos, comment, and subscribe.</p>
     <button type="submit" id="sign-in">
       <i class="fa fa-user-circle-o"></i><b>Sign in</b>
     </button>
+  </div>
+  <div *ngIf="log == 1" id="subscriptions">
+    <p>Subscriptions</p>
+    <div class="option">
+      <img
+        src="https://yt3.ggpht.com/ytc/AMLnZu9UWrGceKWaqm8AF89vuxrEt8MO3E59qOoQ785Lew=s88-c-k-c0x00ffffff-no-rj"
+      />
+      <p>freeCodeCamp.org</p>
+    </div>
+    <div class="option">
+      <img
+        src="https://yt3.ggpht.com/EPxCuC3JsL3a_Hatqymi0WQvNiUsy7f6KwGbL4Ypg3hI6HkgmtiiEsPlVmecMArnXFE6Cm4N=s88-c-k-c0x00ffffff-no-rj"
+      />
+      <p>VolumePlusTV</p>
+    </div>
+    <div class="option">
+      <img
+        src="https://yt3.ggpht.com/Ritdi2Pdf33yHjLPHiqE-KH5wiF-SNfxgwyKPVLNWn-_8J1GcykMOfp9x273peY8EQNC-_qEeQ=s88-c-k-c0x00ffffff-no-rj"
+      />
+      <p>NewJeans</p>
+    </div>
   </div>
   <div>
     <p>Explore</p>

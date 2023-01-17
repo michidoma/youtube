@@ -1,6 +1,7 @@
 import { SafeResourceUrl } from '@angular/platform-browser';
 
 export interface card {
+  id: number;
   thumbnail: String;
   channelName: String;
   channelProfile: String;
@@ -13,4 +14,5 @@ export interface card {
   views: String;
   time: String;
   description: String;
+  keywords: String[];
 }

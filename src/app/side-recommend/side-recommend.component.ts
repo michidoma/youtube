@@ -8,6 +8,6 @@ import { contents } from '../content-section/content-section.component';
   styles: [],
 })
 export class SideRecommendComponent {
-  @Input() id: any;
+  @Input() content: card | undefined;
   @Input() contents: card[] = contents;
 }

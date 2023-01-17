@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 import { card } from '../models/card';
-import { contents } from '../content-section/content-section.component';
 
 @Component({
   selector: 'app-details',
@@ -9,17 +8,27 @@ import { contents } from '../content-section/content-section.component';
   styles: [],
 })
 export class DetailsComponent {
-  @Input() id: any;
-  @Input() contents: card[] = contents;
+  @Input() content: card | undefined;
   showMore: boolean = false;
-
-  constructor(public sanitizer: DomSanitizer) {}
-
-  ngOnInit() {
-    for (var i = 0; i < contents.length; i++) {
-      contents[i].safeEmbed = this.sanitizer.bypassSecurityTrustResourceUrl(
-        contents[i].embed
-      );
+  loggedIn: number | undefined;
+  sub: boolean = false;
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private _router: Router
+  ) {}
+  ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe((params) => {
+      this.loggedIn = +params['log'];
+    });
+  }
+  navigateToProfile() {
+    this._router.navigate(['/profile']);
+  }
+  myClickHandler(event: any): void {
+    if (this.loggedIn != 1) {
+      this.navigateToProfile();
+    } else {
+      this.sub = true;
     }
   }
 }

@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
 })
 export class NavBarComponent {
-  constructor(private _router: Router) {}
-  message: boolean = true;
+  loggedIn: number = 0;
+  constructor(
+    private _router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
+  ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe((params) => {
+      this.loggedIn = +params['log'];
+    });
+  }
   navigateToHome() {
     this._router.navigate(['home']);
-  }
-  navigateToWatch() {
-    this._router.navigateByUrl('/watch');
   }
 }

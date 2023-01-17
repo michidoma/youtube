@@ -4,7 +4,8 @@
     <img
       src="/../../assets/img/logo.png"
       title="Youtube Home"
-      (click)="navigateToHome()"
+      [routerLink]="['/home']"
+      [queryParams]="{ log: loggedIn }"
     />
   </div>
   <div class="search-bar">
@@ -20,12 +21,24 @@
   </div>
   <div class="nav-right">
     <img
+      class="settings"
       src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png"
       alt="Settings"
       title="Settings"
     />
-    <button type="submit" id="sign-in">
+    <button
+      *ngIf="loggedIn != 1"
+      type="submit"
+      id="sign-in"
+      [routerLink]="['/profile']"
+    >
       <i class="fa fa-user-circle-o"></i><b>Sign in</b>
     </button>
+    <img
+      class="user-profile"
+      *ngIf="loggedIn == 1"
+      src="https://yt3.ggpht.com/ytc/AMLnZu8i1_hTm5hYA-iqDAOWm4qadHykTthU8_M2zX6VmLbbTsxd-As9rq-W9y7bAcmj=s88-c-k-c0x00ffffff-no-rj-mo"
+      alt=""
+    />
   </div>
 </nav>

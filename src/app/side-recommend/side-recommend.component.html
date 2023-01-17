@@ -1,15 +1,18 @@
 <div class="side-recommendation">
-  <div *ngFor="let cont of contents; let i = index">
+  <div *ngFor="let cont of contents">
     <app-side-video-card
       [itemData]="cont"
-      [routerLink]="['/watch', i]"
-      *ngIf="i != id"
+      [routerLink]="['/watch']"
+      [queryParams]="{ id: cont.id }"
+      *ngIf="cont != content"
     ></app-side-video-card>
   </div>
-  <div *ngFor="let cont of contents; let i = index">
+  <div *ngFor="let cont of contents">
     <app-side-video-card
       [itemData]="cont"
-      *ngIf="i != id"
+      [routerLink]="['/watch']"
+      [queryParams]="{ id: cont.id }"
+      *ngIf="cont != content"
     ></app-side-video-card>
   </div>
 </div>
