@@ -7,11 +7,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SideBarComponent {
   message: boolean = true;
-  log: number | undefined;
+  loggedIn: number | undefined;
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
-      this.log = +params['log'];
+      this.loggedIn = +params['log'];
     });
   }
 }

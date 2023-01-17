@@ -10,7 +10,12 @@
     </div>
     <div class="search-bar">
       <img src="../../../../assets/img/logo.png" />
-      <input type="text" placeholder="Search" #box />
+      <input
+        (keydown.enter)="getValue(box.value)"
+        type="text"
+        placeholder="Search"
+        #box
+      />
       <button
         type="submit"
         (click)="getValue(box.value)"

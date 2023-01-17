@@ -15,6 +15,10 @@ import { DetailsComponent } from './details/details.component';
 import { SideRecommendComponent } from './side-recommend/side-recommend.component';
 import { SideVideoCardComponent } from './side-video-card/side-video-card.component';
 import { CommentComponent } from './comment/comment.component';
+import { ColorDirective } from './color.directive';
+import { ResultsComponent } from './results/results.component';
+import { DatePipe } from './date.pipe';
+import { NumberFormatPipe } from './number-format.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { CommentComponent } from './comment/comment.component';
     SideRecommendComponent,
     SideVideoCardComponent,
     CommentComponent,
+    ColorDirective,
+    ResultsComponent,
+    DatePipe,
+    NumberFormatPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

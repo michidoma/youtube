@@ -7,10 +7,9 @@ import { Router } from '@angular/router';
   styles: [],
 })
 export class PageNotFoundComponent {
-  constructor(private _router: Router) {}
-
+  constructor(private router: Router) {}
   getValue(val: string) {
-    this._router.navigate(['/feed/results'], {
+    this.router.navigate(['/results'], {
       queryParams: { search_query: val },
     });
   }

@@ -1,0 +1,9 @@
+<app-nav-bar></app-nav-bar>
+<section>
+  <app-side-bar></app-side-bar>
+  <div class="results">
+    <div *ngFor="let result of resultArray">
+      <app-side-video-card [itemData]="result"></app-side-video-card>
+    </div>
+  </div>
+</section>

@@ -13,9 +13,10 @@ export class WatchComponent implements OnInit {
   id: number = 0;
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.id = +params['id'];
-      this.content = contents.find((content) => content.id === this.id);
-    });
+    this.content = this.activatedRoute.snapshot.data['watchData'];
+    // this.activatedRoute.queryParams.subscribe((params) => {
+    //   this.id = +params['id'];
+    //   this.content = contents.find((content) => content.id === this.id);
+    // });
   }
 }

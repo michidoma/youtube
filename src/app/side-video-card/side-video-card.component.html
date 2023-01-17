@@ -9,7 +9,10 @@
   <div class="detail">
     <h3>{{ itemData.title }}</h3>
     <p>{{ itemData.channelName }}</p>
-    <p>{{ itemData.views }} views • {{ itemData.time }} ago</p>
+    <p>
+      {{ itemData.views | numberFormat }} views •
+      {{ itemData.date | datePipe }} ago
+    </p>
   </div>
   <div>
     <img

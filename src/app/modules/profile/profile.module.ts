@@ -5,7 +5,10 @@ import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'account', pathMatch: 'full' },
-  { path: 'account', component: AccountComponent },
+  {
+    path: 'account',
+    component: AccountComponent,
+  },
 ];
 
 @NgModule({

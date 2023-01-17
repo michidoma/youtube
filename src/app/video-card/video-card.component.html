@@ -20,7 +20,10 @@
           <b>{{ itemData?.title }}</b>
         </p>
         <p title="{{ itemData?.channelName }}">{{ itemData.channelName }}</p>
-        <p>{{ itemData?.views }} views · {{ itemData?.time }} ago</p>
+        <p>
+          {{ itemData?.views | numberFormat }} views ·
+          {{ itemData?.date | datePipe }} ago
+        </p>
       </div>
     </div>
     <div class="invisible">

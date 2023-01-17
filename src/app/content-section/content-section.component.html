@@ -12,7 +12,7 @@
       <app-video-card
         [itemData]="content"
         [routerLink]="['/watch']"
-        [queryParams]="{ id: content.id }"
+        [queryParams]="{ id: content.id, log: loggedIn }"
       ></app-video-card>
     </div>
   </div>

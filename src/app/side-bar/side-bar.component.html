@@ -43,13 +43,13 @@
       <p>History</p>
     </div>
   </div>
-  <div *ngIf="log != 1" class="sign-in">
+  <div *ngIf="loggedIn != 1" class="sign-in">
     <p>Sign in to like videos, comment, and subscribe.</p>
     <button type="submit" id="sign-in">
       <i class="fa fa-user-circle-o"></i><b>Sign in</b>
     </button>
   </div>
-  <div *ngIf="log == 1" id="subscriptions">
+  <div *ngIf="loggedIn == 1" id="subscriptions">
     <p>Subscriptions</p>
     <div class="option">
       <img

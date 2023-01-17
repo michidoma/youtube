@@ -14,7 +14,7 @@
             <a href="" title="{{ content?.channelName }}"
               ><strong>{{ content?.channelName }}</strong>
             </a>
-            <p>{{ content?.channelSubCount }} subscribers</p>
+            <p>{{ content?.channelSubCount | numberFormat }} subscribers</p>
           </div>
         </div>
         <div class="subscribe" *ngIf="sub === false">
@@ -37,7 +37,7 @@
               />
             </div>
             <div>
-              <span>{{ content?.likeCount }}</span>
+              <span>{{ content?.likeCount | numberFormat }}</span>
             </div>
           </button>
           <button id="dislike" title="I dislike this">
@@ -78,8 +78,8 @@
       <div class="description">
         <div>
           <b
-            ><span>{{ content?.views }} views&ensp;</span
-            ><span>{{ content?.time }} ago</span></b
+            ><span>{{ content?.views | numberFormat }} views&ensp;</span
+            ><span>{{ content?.date | datePipe }} ago</span></b
           >
         </div>
         <div [ngClass]="{ 'line-clamp': !showMore }">

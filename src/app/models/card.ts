@@ -5,14 +5,14 @@ export interface card {
   thumbnail: String;
   channelName: String;
   channelProfile: String;
-  channelSubCount: String;
+  channelSubCount: number;
   title: String;
   embed: string;
   safeEmbed: SafeResourceUrl;
   gif: String;
-  likeCount: String;
-  views: String;
-  time: String;
+  likeCount: number;
+  views: number;
+  date: Date;
   description: String;
   keywords: String[];
 }
