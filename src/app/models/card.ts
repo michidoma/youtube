@@ -15,4 +15,5 @@ export interface card {
   date: Date;
   description: String;
   keywords: String[];
+  categories: String[];
 }

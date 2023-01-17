@@ -46,6 +46,7 @@ export const contents: card[] = [
     description:
       "About Netflix: Netflix is the world's leading streaming entertainment service with 223 million paid memberships in over 190 countries enjoying TV series, documentaries, feature films and mobile games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
     keywords: ['wednesday', 'addams'],
+    categories: ['trending'],
   },
   {
     id: 2,
@@ -64,6 +65,7 @@ export const contents: card[] = [
     description:
       "DISCLAIMER: All opinions shared on this channel are our own and don't express views or opinions of our employers. We only use our experiences and public knowledge to make our content. NO CONFIDENTIAL INFORMATION of our employers is used or shared on this channel. This is not a Professional Coaching channel, it only highlights the public resources that have worked for our careers.",
     keywords: ['coding', 'problems'],
+    categories: ['learning'],
   },
   {
     id: 3,
@@ -82,6 +84,7 @@ export const contents: card[] = [
     description:
       'Тэнгэрийг судлахад заавал телескопны шаардлага байхгүй. Эхний ээлжинд одон орны энгийн объектуудыг таних, ялгахыг биеэ даан сурч болно. Таньд хэрэгтэй зүйл гэвэл ердөө л гэрлийн бохирдол багатай цэлмэг тэнгэр бас багахан хэмжээний мэдлэг. Энэхүү бичлэгээр бүгдээрээ хэрхэн нүцгэн нүдээрээ одон оронч болохыг сурцгаая!',
     keywords: ['astronomy'],
+    categories: ['learning'],
   },
   {
     id: 4,
@@ -100,6 +103,7 @@ export const contents: card[] = [
     description:
       '22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다. 22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다. 22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다.',
     keywords: ['mbti', 'korean'],
+    categories: ['trending'],
   },
   {
     id: 5,
@@ -118,6 +122,7 @@ export const contents: card[] = [
     description:
       'Today we visit London, England and ask strangers how many languages they speak. Support my channel: 👉 https://www.patreon.com/thenewtravel. Support my channel: https://www.patreon.com/thenewtravel',
     keywords: ['language', 'london', 'travel'],
+    categories: ['learning'],
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const contents: card[] = [
     description:
       'DISCLAIMER: This video and description contain affiliate links, which means that if you click on one of the product links, I’ll receive a small commission. This helps to support the channel and allows me to continue to make videos like this.',
     keywords: ['camera'],
+    categories: [],
   },
   {
     id: 7,
@@ -154,6 +160,7 @@ export const contents: card[] = [
     description:
       'NewJeans (뉴진스) "Ditto" // Slowed & Reverb. "Ditto" is a song recorded by South Korean girl group NewJeans for their first single album OMG. The single album was released by ADOR, a subsidiary of Hybe Corporation, on January 2, 2023, "Ditto" was released as a pre-release track on December 19, 2022.',
     keywords: ['kpop', 'newjeans', 'ditto', 'korean'],
+    categories: ['music'],
   },
   {
     id: 8,
@@ -172,5 +179,6 @@ export const contents: card[] = [
     description:
       'Get free access to over 2500 documentaries on CuriosityStream: http://go.thoughtleaders.io/112862019... STEMerch Store: https://stemerch.com/Support the Channel: https://www.patreon.com/zachstarPayPal(one time donation): https://www.paypal.me/ZachStarYT',
     keywords: ['surprise', 'random'],
+    categories: ['learning'],
   },
 ];
