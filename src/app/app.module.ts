@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { DatePipe } from './date.pipe';
 import { NumberFormatPipe } from './number-format.pipe';
 import { SharedModule } from './modules/shared/shared.module';
 import { CategoriesComponent } from './categories/categories.component';
+import { ExampleInterceptor } from './example.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,16 @@ import { CategoriesComponent } from './categories/categories.component';
     NumberFormatPipe,
     CategoriesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    SharedModule,
+    HttpClientModule,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ExampleInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

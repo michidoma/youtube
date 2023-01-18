@@ -148,10 +148,13 @@ body {
                         padding: 15px;
                     }
                 }
-                .option:hover, #home {
+                .option:hover {
                     background-color: #f2f2f2;
                 }
-                #home:hover {
+                .active-link {
+                    background-color: #f2f2f2;
+                }
+                .active-link:hover {
                     background-color: #e6e6e6;
                 }
             }
@@ -358,7 +361,7 @@ body {
         padding: 10px;
         cursor: pointer;
     }
-    #all {
+    button:first-child {
         background-color: black;
         color: white;
     }

@@ -1,24 +1,38 @@
-<div [ngClass]="!message ? 'left-panel' : 'side-closed'">
+<div [ngClass]="closed ? 'side-closed' : 'left-panel'">
   <div class="menu">
-    <i class="material-icons" (click)="message = !message">menu</i>
+    <i class="material-icons" (click)="closed = !closed">menu</i>
     <img src="/../../assets/img/logo.png" title="Youtube Home" />
   </div>
   <div>
-    <div class="option" id="home" title="Home">
+    <div
+      class="option"
+      id="home"
+      title="Home"
+      routerLink="/home"
+      routerLinkActive="active-link"
+    >
       <img
         src="https://img.icons8.com/material-sharp/24/null/home.png"
         alt="Home"
       />
       <p>Home</p>
     </div>
-    <div class="option shorts" title="Shorts" [routerLink]="['/feed/shorts']">
+    <div
+      class="option shorts"
+      title="Shorts"
+      routerLink="/feed/shorts"
+      routerLinkActive="active-link"
+      [queryParams]="{ log: loggedIn }"
+    >
       <img src="../../assets/img/shorts.png" alt="Shorts" />
       <p>Shorts</p>
     </div>
     <div
       class="option"
       title="Subscriptions"
-      [routerLink]="['/feed/subscriptions']"
+      routerLink="/feed/subscriptions"
+      routerLinkActive="active-link"
+      [queryParams]="{ log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989849.png"
@@ -28,7 +42,13 @@
     </div>
   </div>
   <div>
-    <div class="option" title="Library" [routerLink]="['/feed/library']">
+    <div
+      class="option"
+      title="Library"
+      routerLink="/feed/library"
+      routerLinkActive="active-link"
+      [queryParams]="{ log: loggedIn }"
+    >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989835.png"
         alt="Library"
@@ -75,8 +95,9 @@
     <div
       class="option"
       title="Trending"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'trending' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'trending', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2595/2595122.png"
@@ -87,8 +108,9 @@
     <div
       class="option"
       title="Music"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'music' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'music', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/461/461238.png"
@@ -99,8 +121,9 @@
     <div
       class="option"
       title="Live"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'live' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'live', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989838.png"
@@ -111,8 +134,9 @@
     <div
       class="option"
       title="Gaming"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'gaming' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'gaming', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/7713/7713741.png"
@@ -123,8 +147,9 @@
     <div
       class="option"
       title="News"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'news' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'news', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2990/2990012.png"
@@ -135,8 +160,9 @@
     <div
       class="option"
       title="Sports"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'sports' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'sports', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/1152/1152912.png"
@@ -147,8 +173,9 @@
     <div
       class="option"
       title="Learning"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'learning' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'learning', log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/1819/1819990.png"
@@ -159,8 +186,9 @@
     <div
       class="option"
       title="Fashion & Beauty"
-      [routerLink]="['/categories']"
-      [queryParams]="{ cat: 'fashion&beauty' }"
+      routerLink="/categories"
+      routerLinkActive="active-link"
+      [queryParams]="{ cat: 'fashion&beauty', log: loggedIn }"
     >
       <img src="https://cdn-icons-png.flaticon.com/512/3159/3159614.png" />
       <p>Fashion & Beauty</p>
@@ -188,10 +216,7 @@
       />
       <p>Help</p>
     </div>
-    <div
-      class="option"
-      title="https://cdn-icons-png.flaticon.com/512/4024/4024478.png"
-    >
+    <div class="option" title="Send feedback">
       <img
         src="https://cdn-icons-png.flaticon.com/512/4024/4024478.png"
         alt="Send feedback"

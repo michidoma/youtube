@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { card } from '../models/card';
 
@@ -7,11 +7,14 @@ import { card } from '../models/card';
   templateUrl: './categories.component.html',
   styles: [],
 })
-export class CategoriesComponent {
+export class CategoriesComponent implements OnInit {
   filtered: card[] = [];
+  cat: String = '';
 
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
-    this.filtered = this.activatedRoute.snapshot.data['catData'];
+    this.activatedRoute.data.subscribe((resolversData) => {
+      this.filtered = this.activatedRoute.snapshot.data['catData'];
+    });
   }
 }

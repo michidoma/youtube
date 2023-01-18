@@ -11,6 +11,8 @@ export class ResultsComponent {
   resultArray: card[] = [];
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
-    this.resultArray = this.activatedRoute.snapshot.data['resultsData'];
+    this.activatedRoute.data.subscribe((resolversData) => {
+      this.resultArray = this.activatedRoute.snapshot.data['resultsData'];
+    });
   }
 }

@@ -30,6 +30,7 @@ export class ResultsResolver implements Resolve<any> {
         }
       }
     }
+    console.log('Resolver executed');
     return of(resultArray);
   }
 }

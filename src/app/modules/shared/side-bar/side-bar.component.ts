@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './side-bar.component.html',
 })
 export class SideBarComponent {
-  message: boolean = true;
+  closed: boolean = true;
   loggedIn: number | undefined;
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {

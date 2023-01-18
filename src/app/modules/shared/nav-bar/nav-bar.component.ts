@@ -13,9 +13,6 @@ export class NavBarComponent {
       this.loggedIn = +params['log'];
     });
   }
-  navigateToHome() {
-    this.router.navigate(['home']);
-  }
   getValue(val: string) {
     this.router.navigate(['/results'], {
       queryParams: { search_query: val },

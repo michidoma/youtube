@@ -25,18 +25,21 @@ const routes: Routes = [
     path: 'watch',
     component: WatchComponent,
     resolve: { watchData: WatchResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
     canActivate: [WatchGuard],
   },
   {
     path: 'results',
     component: ResultsComponent,
     resolve: { resultsData: ResultsResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
     canActivate: [ResultsGuard],
   },
   {
     path: 'categories',
     component: CategoriesComponent,
     resolve: { catData: CategoriesResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'profile',

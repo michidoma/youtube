@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { card } from '../models/card';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-content-section',
@@ -12,7 +13,8 @@ export class ContentSectionComponent {
   loggedIn: number | undefined;
   constructor(
     public sanitizer: DomSanitizer,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -21,6 +23,7 @@ export class ContentSectionComponent {
         contents[i].embed
       );
     }
+
     this.activatedRoute.queryParams.subscribe((params) => {
       this.loggedIn = +params['log'];
     });

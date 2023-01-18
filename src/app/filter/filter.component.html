@@ -1,18 +1,5 @@
 <div class="filter">
-  <button id="all">All</button>
-  <button>Music</button>
-  <button>K-Pop</button>
-  <button>Game shows</button>
-  <button>Mixes</button>
-  <button>Gaming</button>
-  <button>Psychology</button>
-  <button>Live</button>
-  <button>Vocal Music</button>
-  <button>Korean dramas</button>
-  <button>Unboxing</button>
-  <button>Physics</button>
-  <button>Algebra</button>
-  <button>Music</button>
-  <button>K-Pop</button>
-  <button>Game shows</button>
+  <button *ngFor="let data of httpData" [title]="data.name">
+    {{ data.name }}
+  </button>
 </div>
