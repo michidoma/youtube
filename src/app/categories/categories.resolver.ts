@@ -1,21 +1,27 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
 } from '@angular/router';
-import { filter, Observable, of } from 'rxjs';
-import { contents } from '../content-section/content-section.component';
+import { Observable, of } from 'rxjs';
 import { card } from '../models/card';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoriesResolver implements Resolve<any> {
+  constructor(private http: HttpClient) {}
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<any> {
+    let contents: card[] = [];
+    this.http.get<any>('/src/app/api/datas.ts').subscribe((data) => {
+      contents = data;
+    });
+
     const filteredArray: card[] = [];
     let category = route.queryParamMap.get('cat');
     for (var i = 0; i < contents.length; i++) {

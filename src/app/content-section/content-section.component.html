@@ -8,12 +8,5 @@
         [queryParams]="{ id: content.id, log: loggedIn }"
       ></app-video-card>
     </div>
-    <div *ngFor="let content of contents">
-      <app-video-card
-        [itemData]="content"
-        [routerLink]="['/watch']"
-        [queryParams]="{ id: content.id, log: loggedIn }"
-      ></app-video-card>
-    </div>
   </div>
 </div>

@@ -21,7 +21,7 @@ import { DatePipe } from './date.pipe';
 import { NumberFormatPipe } from './number-format.pipe';
 import { SharedModule } from './modules/shared/shared.module';
 import { CategoriesComponent } from './categories/categories.component';
-import { ExampleInterceptor } from './example.interceptor';
+import { RequestInterceptor } from './request.interceptor';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { ExampleInterceptor } from './example.interceptor';
     HttpClientModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ExampleInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

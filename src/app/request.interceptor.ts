@@ -7,22 +7,21 @@ import {
   HttpResponse,
 } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { contents } from './content-section/content-section.component';
+import { contents } from './api/datas';
 
 @Injectable()
-export class ExampleInterceptor implements HttpInterceptor {
+export class RequestInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    // const req = request.clone({
-    //   headers: request.headers.set('Authorization', 'Bearer jsds'),
-    // });
-    // console.log(request);
-    // console.log('req: ', req);
+    if (request.url === '/src/app/api/datas.ts') {
+      console.log('request.url: ', request.url, '\n body: ', contents);
+      return of(new HttpResponse({ body: contents }));
+    }
+    console.log('request.url: ', request.url, '\n body: ', request);
     return next.handle(request);
-    // return of(new HttpResponse({ body: contents }));
   }
 }

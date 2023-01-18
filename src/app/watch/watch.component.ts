@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { card } from '../models/card';
 
@@ -8,7 +8,7 @@ import { card } from '../models/card';
   styles: [],
 })
 export class WatchComponent implements OnInit {
-  content: card | undefined;
+  content: card | any;
   id: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute) {}

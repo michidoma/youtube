@@ -8,22 +8,26 @@ import { card } from '../models/card';
   styles: [],
 })
 export class DetailsComponent {
-  @Input() content: card | undefined;
+  @Input() content: card | any;
   showMore: boolean = false;
   loggedIn: number | undefined;
   sub: boolean = false;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private _router: Router
   ) {}
+
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
       this.loggedIn = +params['log'];
     });
   }
+
   navigateToProfile() {
     this._router.navigate(['/profile']);
   }
+
   myClickHandler(event: any): void {
     if (this.loggedIn != 1) {
       this.navigateToProfile();

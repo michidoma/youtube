@@ -7,12 +7,4 @@
       *ngIf="cont != content"
     ></app-side-video-card>
   </div>
-  <div *ngFor="let cont of contents">
-    <app-side-video-card
-      [itemData]="cont"
-      [routerLink]="['/watch']"
-      [queryParams]="{ id: cont.id, log: loggedIn }"
-      *ngIf="cont != content"
-    ></app-side-video-card>
-  </div>
 </div>
