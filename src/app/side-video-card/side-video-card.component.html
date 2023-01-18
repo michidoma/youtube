@@ -1,6 +1,11 @@
 <div class="items">
   <div class="thumbnail">
-    <img src="{{ itemData.thumbnail }}" alt="" />
+    <img
+      [src]="imgSrc"
+      (mouseover)="imgSrc = itemData.gif"
+      (mouseout)="imgSrc = itemData.thumbnail"
+    />
+    <a class="duration-time"> {{ itemData.duration }} </a>
     <!-- <img
       class="watch-later"
       src="https://img.icons8.com/fluency-systems-regular/48/null/time-machine.png"

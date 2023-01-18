@@ -12,10 +12,11 @@ import { WatchResolver } from './watch/watch.resolver';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
     pathMatch: 'full',
+    redirectTo: '/home',
   },
   {
+    title: 'YouTube',
     path: 'home',
     component: HomeComponent,
   },
@@ -26,6 +27,7 @@ const routes: Routes = [
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
+    title: 'Results',
     path: 'results',
     component: ResultsComponent,
     resolve: { resultsData: ResultsResolver },

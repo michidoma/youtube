@@ -26,7 +26,9 @@ export class WatchResolver implements Resolve<any> {
     const idParam = Number(route.queryParamMap.get('id'));
     const data: any = contents.find((i) => i.id === idParam);
 
-    data.safeEmbed = this.sanitizer.bypassSecurityTrustResourceUrl(data.embed);
+    data.safeEmbed = this.sanitizer.bypassSecurityTrustResourceUrl(
+      data.embed + '?autoplay=1'
+    );
 
     return of(data);
   }

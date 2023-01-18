@@ -1,11 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <section>
   <app-side-bar></app-side-bar>
-  <!-- <div class="results">
-    <div *ngFor="let item of filtered">
-      <app-side-video-card [itemData]="item"></app-side-video-card>
-    </div>
-  </div> -->
   <div class="grid-container categories">
     <div *ngFor="let item of filtered">
       <app-video-card [itemData]="item"></app-video-card>

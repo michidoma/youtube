@@ -1,12 +1,12 @@
 <div class="grid-item">
   <div class="scale">
     <div class="thumbnail">
-      <!-- <iframe
-        src="https://www.youtube.com/embed/j_MuZmJNirw?autoplay=1"
-        allow="autoplay;"
-        frameborder="0"
-      ></iframe> -->
-      <img src="{{ itemData.thumbnail }}" alt="" />
+      <img
+        [src]="imgSrc"
+        (mouseover)="imgSrc = itemData.gif"
+        (mouseout)="imgSrc = itemData.thumbnail"
+      />
+      <a class="duration-time">{{ itemData.duration }}</a>
     </div>
     <div class="description">
       <div>
