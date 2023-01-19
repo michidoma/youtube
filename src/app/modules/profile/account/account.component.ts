@@ -9,4 +9,8 @@ export class AccountComponent {
   setLog(val: string): void {
     localStorage.setItem('loggedIn', val);
   }
+
+  setUsername(name: string) {
+    localStorage.setItem('username', name);
+  }
 }

@@ -45,9 +45,72 @@
       src="https://cdn-icons-png.flaticon.com/512/3239/3239952.png"
       title="Notifications"
     />
-    <img
-      class="user-profile"
-      src="https://yt3.ggpht.com/ytc/AMLnZu8i1_hTm5hYA-iqDAOWm4qadHykTthU8_M2zX6VmLbbTsxd-As9rq-W9y7bAcmj=s88-c-k-c0x00ffffff-no-rj-mo"
-    />
+    <button (click)="pop = !pop" class="user-profile">
+      {{ username.charAt(0) }}
+    </button>
+  </div>
+  <div *ngIf="pop === true" class="pop-up">
+    <div>
+      <div>
+        <button>{{ username.charAt(0) }}</button>
+      </div>
+      <div>
+        <p>{{ username }}</p>
+        <p>@{{ username }}</p>
+        <p class="manage-account">Manage your Google Account</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img
+          src="../../../../assets/img/circle-person-profile-user-group-people-svgrepo-com.svg"
+        />
+        <a>Your channel</a>
+      </div>
+      <div>
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>YouTube Studio</title>
+          <path
+            d="M20.919 13.176c.048-.384.084-.768.084-1.176s-.036-.792-.084-1.176l2.532-1.98a.605.605 0 0 0 .144-.768l-2.4-4.152a.603.603 0 0 0-.732-.264l-2.988 1.2a8.767 8.767 0 0 0-2.028-1.176l-.456-3.18A.585.585 0 0 0 14.403 0h-4.8c-.3 0-.552.216-.588.504l-.456 3.18A9.22 9.22 0 0 0 6.531 4.86l-2.988-1.2a.585.585 0 0 0-.732.264l-2.4 4.152a.592.592 0 0 0 .144.768l2.532 1.98c-.048.384-.084.78-.084 1.176s.036.792.084 1.176l-2.532 1.98a.605.605 0 0 0-.144.768l2.4 4.152c.144.264.468.36.732.264l2.988-1.2c.624.48 1.296.876 2.028 1.176l.456 3.18a.585.585 0 0 0 .588.504h4.8c.3 0 .552-.216.588-.504l.456-3.18a9.22 9.22 0 0 0 2.028-1.176l2.988 1.2c.276.108.588 0 .732-.264l2.4-4.152a.605.605 0 0 0-.144-.768l-2.532-1.98zM9.603 15.6V8.4l6 3.6-6 3.6z"
+          />
+        </svg>
+        <a>YouTube Studio</a>
+      </div>
+      <div>
+        <img
+          src="../../../../assets/img/circle-in-person-profile-user-group-svgrepo-com.svg"
+        />
+        <a>Switch account</a>
+      </div>
+      <div (click)="setLogAndReload('0')" [routerLink]="['/home']">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8m4-9-4-4m4 4-4 4m4-4H9"
+          />
+        </svg>
+        <a>Sign out</a>
+      </div>
+    </div>
+    <div>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-moon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+          />
+        </svg>
+        <a>Appearance: Device theme</a>
+      </div>
+    </div>
   </div>
 </nav>

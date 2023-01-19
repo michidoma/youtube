@@ -9,7 +9,7 @@
     </div>
     <div>
       <div>
-        <input type="text" placeholder="Email or phone" />
+        <input type="text" placeholder="Email or phone" #username/>
         <button><strong>Forgot email?</strong></button>
       </div>
       <div>
@@ -18,7 +18,7 @@
       </div>
       <div>
         <span><strong>Create account</strong></span>
-        <button (click)="setLog('1')" [routerLink]="['/home']">Sign in</button>
+        <button (click)="setLog('1'); setUsername(username.value)" [routerLink]="['/home']">Sign in</button>
       </div>
     </div>
   </div>
