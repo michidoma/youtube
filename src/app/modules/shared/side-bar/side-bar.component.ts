@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,11 +6,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SideBarComponent {
   closed: boolean = true;
-  loggedIn: number | undefined;
-  constructor(private activatedRoute: ActivatedRoute) {}
+  signedIn: string = '';
+
+  constructor() {}
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.loggedIn = +params['log'];
-    });
+    this.signedIn = localStorage.getItem('loggedIn') || '-1';
   }
 }

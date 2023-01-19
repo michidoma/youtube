@@ -22,7 +22,6 @@
       title="Shorts"
       routerLink="/feed/shorts"
       routerLinkActive="active-link"
-      [queryParams]="{ log: loggedIn }"
     >
       <img src="../../assets/img/shorts.png" alt="Shorts" />
       <p>Shorts</p>
@@ -32,7 +31,6 @@
       title="Subscriptions"
       routerLink="/feed/subscriptions"
       routerLinkActive="active-link"
-      [queryParams]="{ log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989849.png"
@@ -47,7 +45,6 @@
       title="Library"
       routerLink="/feed/library"
       routerLinkActive="active-link"
-      [queryParams]="{ log: loggedIn }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989835.png"
@@ -63,13 +60,13 @@
       <p>History</p>
     </div>
   </div>
-  <div *ngIf="loggedIn != 1" class="sign-in">
+  <div *ngIf="signedIn === '0'" class="sign-in">
     <p>Sign in to like videos, comment, and subscribe.</p>
     <button type="submit" id="sign-in">
       <i class="fa fa-user-circle-o"></i><b>Sign in</b>
     </button>
   </div>
-  <div *ngIf="loggedIn == 1" id="subscriptions">
+  <div *ngIf="signedIn === '1'" id="subscriptions">
     <p>Subscriptions</p>
     <div class="option">
       <img
@@ -97,7 +94,7 @@
       title="Trending"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'trending', log: loggedIn }"
+      [queryParams]="{ cat: 'trending' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2595/2595122.png"
@@ -110,7 +107,7 @@
       title="Music"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'music', log: loggedIn }"
+      [queryParams]="{ cat: 'music' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/461/461238.png"
@@ -123,7 +120,7 @@
       title="Live"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'live', log: loggedIn }"
+      [queryParams]="{ cat: 'live' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2989/2989838.png"
@@ -136,7 +133,7 @@
       title="Gaming"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'gaming', log: loggedIn }"
+      [queryParams]="{ cat: 'gaming' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/7713/7713741.png"
@@ -149,7 +146,7 @@
       title="News"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'news', log: loggedIn }"
+      [queryParams]="{ cat: 'news' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/2990/2990012.png"
@@ -162,7 +159,7 @@
       title="Sports"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'sports', log: loggedIn }"
+      [queryParams]="{ cat: 'sports' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/1152/1152912.png"
@@ -175,7 +172,7 @@
       title="Learning"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'learning', log: loggedIn }"
+      [queryParams]="{ cat: 'learning' }"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/1819/1819990.png"
@@ -188,7 +185,7 @@
       title="Fashion & Beauty"
       routerLink="/categories"
       routerLinkActive="active-link"
-      [queryParams]="{ cat: 'fashion&beauty', log: loggedIn }"
+      [queryParams]="{ cat: 'fashion&beauty' }"
     >
       <img src="https://cdn-icons-png.flaticon.com/512/3159/3159614.png" />
       <p>Fashion & Beauty</p>

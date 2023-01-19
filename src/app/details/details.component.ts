@@ -12,6 +12,7 @@ export class DetailsComponent {
   showMore: boolean = false;
   loggedIn: number | undefined;
   sub: boolean = false;
+  signedIn: string = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -19,18 +20,15 @@ export class DetailsComponent {
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.loggedIn = +params['log'];
-    });
-  }
-
-  navigateToProfile() {
-    this._router.navigate(['/profile']);
+    // this.activatedRoute.queryParams.subscribe((params) => {
+    //   this.loggedIn = +params['log'];
+    // });
+    this.signedIn = localStorage.getItem('loggedIn') || '-1';
   }
 
   myClickHandler(event: any): void {
-    if (this.loggedIn != 1) {
-      this.navigateToProfile();
+    if (this.signedIn === '0') {
+      this._router.navigate(['/profile']);
     } else {
       this.sub = true;
     }

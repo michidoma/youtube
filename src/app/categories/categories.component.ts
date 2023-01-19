@@ -22,7 +22,6 @@ export class CategoriesComponent implements OnInit {
     });
     this.activatedRoute.queryParams.subscribe((params) => {
       let str: string = params['cat'];
-      // let str: any = this.titleService.setTitle(params['cat']);
       str = str[0].toUpperCase() + str.slice(1);
       this.titleService.setTitle(str);
     });

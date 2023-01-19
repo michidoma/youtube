@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-account',
@@ -6,5 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class AccountComponent {
-  log: boolean = false;
+  setLog(val: string): void {
+    localStorage.setItem('loggedIn', val);
+  }
 }

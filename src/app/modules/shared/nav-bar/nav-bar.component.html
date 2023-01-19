@@ -5,7 +5,6 @@
       src="/../../assets/img/logo.png"
       title="Youtube Home"
       [routerLink]="['/home']"
-      [queryParams]="{ log: loggedIn }"
     />
   </div>
   <div class="search-bar">
@@ -24,24 +23,30 @@
       <i class="fa fa-microphone"></i>
     </button>
   </div>
-  <div class="nav-right">
+  <div class="nav-right" *ngIf="signedIn === '0'">
     <img
       class="settings"
       src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png"
       alt="Settings"
       title="Settings"
     />
-    <button
-      *ngIf="loggedIn != 1"
-      type="submit"
-      id="sign-in"
-      [routerLink]="['/profile']"
-    >
+    <button type="submit" id="sign-in" [routerLink]="['/profile']">
       <i class="fa fa-user-circle-o"></i><b>Sign in</b>
     </button>
+  </div>
+  <div class="nav-right" *ngIf="signedIn === '1'">
+    <img
+      class="create"
+      src="https://cdn-icons-png.flaticon.com/512/4189/4189286.png"
+      title="Create"
+    />
+    <img
+      class="notifications"
+      src="https://cdn-icons-png.flaticon.com/512/3239/3239952.png"
+      title="Notifications"
+    />
     <img
       class="user-profile"
-      *ngIf="loggedIn == 1"
       src="https://yt3.ggpht.com/ytc/AMLnZu8i1_hTm5hYA-iqDAOWm4qadHykTthU8_M2zX6VmLbbTsxd-As9rq-W9y7bAcmj=s88-c-k-c0x00ffffff-no-rj-mo"
     />
   </div>

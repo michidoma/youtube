@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
 })
 export class NavBarComponent {
-  loggedIn: number = 0;
+  signedIn: string = '';
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private router: Router) {}
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.loggedIn = +params['log'];
-    });
+    this.signedIn = localStorage.getItem('loggedIn') || '-1';
   }
 
   getValue(val: string) {

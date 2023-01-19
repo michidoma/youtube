@@ -3,7 +3,7 @@
     <app-side-video-card
       [itemData]="cont"
       [routerLink]="['/watch']"
-      [queryParams]="{ id: cont.id, log: loggedIn }"
+      [queryParams]="{ id: cont.id }"
       *ngIf="cont != content"
     ></app-side-video-card>
   </div>

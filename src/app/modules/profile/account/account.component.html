@@ -1,8 +1,25 @@
-<p>account works!</p>
-<button
-  (click)="log = true"
-  [routerLink]="['/home']"
-  [queryParams]="{ log: 1 }"
->
-  Enter
-</button>
+<div class="log-in">
+  <div class="container">
+    <div>
+      <img
+        src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
+      />
+      <h1>Sign in</h1>
+      <p>to continue to YouTube</p>
+    </div>
+    <div>
+      <div>
+        <input type="text" placeholder="Email or phone" />
+        <button><strong>Forgot email?</strong></button>
+      </div>
+      <div>
+        <input type="password" placeholder="Enter your password" />
+        <button><strong>Forgot password?</strong></button>
+      </div>
+      <div>
+        <span><strong>Create account</strong></span>
+        <button (click)="setLog('1')" [routerLink]="['/home']">Sign in</button>
+      </div>
+    </div>
+  </div>
+</div>
