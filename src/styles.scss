@@ -885,10 +885,11 @@ body {
     .items {
         width: calc(100vw - 130px);
         margin-bottom: 10px;
+        margin-right: 0px;
         cursor: pointer;
         .thumbnail {
             img {
-                height: 30vh;
+                height: 25vh;
                 margin-right: 16px;
                 border-radius: 10px;
                 cursor: pointer;
@@ -902,7 +903,7 @@ body {
         }
         #menu-hover {
             position: relative;
-            left: -100px;
+            left: -107px;
         }
 
     }

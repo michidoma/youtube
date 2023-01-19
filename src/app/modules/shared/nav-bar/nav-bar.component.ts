@@ -7,12 +7,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavBarComponent {
   loggedIn: number = 0;
+
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
       this.loggedIn = +params['log'];
     });
   }
+
   getValue(val: string) {
     this.router.navigate(['/results'], {
       queryParams: { search_query: val },

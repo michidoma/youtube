@@ -3,14 +3,14 @@ import { card } from '../models/card';
 export const contents: card[] = [
   {
     id: 1,
-    thumbnail: '../../assets/img/vid1.jpg',
+    thumbnail: 'https://img.youtube.com/vi/j_MuZmJNirw/maxresdefault.jpg',
     channelName: 'Netflix',
     channelProfile:
       'https://yt3.ggpht.com/ytc/AMLnZu8ez2zjv7E2Sp0qzjYCnrpBMLMm5c26MJkGBIQHww=s88-c-k-c0x00ffffff-no-rj',
     channelSubCount: 25638635,
     title: 'Wednesday Addams | Season 2 Announcement | Netflix',
     embed: 'https://www.youtube.com/embed/j_MuZmJNirw',
-    gif: 'https://i.ytimg.com/an_webp/j_MuZmJNirw/mqdefault_6s.webp?du=3000&sqp=CJiYoZ4G&rs=AOn4CLCen2q_XXARApYMD54mo9C2tOwJOQ',
+    gif: '../../assets/img/vid1.webp',
     safeEmbed: '',
     likeCount: 595738,
     views: 14012920,
@@ -23,14 +23,14 @@ export const contents: card[] = [
   },
   {
     id: 2,
-    thumbnail: '../assets/img/vid2.jpg',
+    thumbnail: 'https://img.youtube.com/vi/xF554Tlzo-c/maxresdefault.jpg',
     channelName: 'Power Couple',
     channelProfile:
       'https://yt3.googleusercontent.com/h_5EX_GD2dB4Ti3cQbQ1BjGkm_M-EN_z_mWSw7KG-kYzswbULF5bTogzGRm-KcawIqiXgcnJiOM=s176-c-k-c0x00ffffff-no-rj',
     channelSubCount: 245898,
     title: 'I solved 541 Leetcode problems. But you need only 150.',
     embed: 'https://www.youtube.com/embed/xF554Tlzo-c',
-    gif: 'https://i.ytimg.com/an_webp/xF554Tlzo-c/mqdefault_6s.webp?du=3000&sqp=COWZoZ4G&rs=AOn4CLCoEP7vIeuf8hr2e3lX2rLAK4KuKA',
+    gif: '../../assets/img/vid2.webp',
     safeEmbed: '',
     likeCount: 39422,
     views: 1009050,
@@ -43,14 +43,14 @@ export const contents: card[] = [
   },
   {
     id: 3,
-    thumbnail: '../assets/img/vid3.jpg',
+    thumbnail: 'https://img.youtube.com/vi/CL-f66Ks_yA/maxresdefault.jpg',
     channelName: 'Gej Yu Ve?',
     channelProfile:
       'https://yt3.ggpht.com/oYmh_vAg_RMbv3BQWPhobyD8S0UOwP5W0ZUJl30Hh911AKRDKe5JTxJC8FS1fuUvmRgObuyaaA=s88-c-k-c0x00ffffff-no-rj',
     channelSubCount: 87796,
     title: 'Нүцгэн нүдээр Астрономи...',
     embed: 'https://www.youtube.com/embed/CL-f66Ks_yA',
-    gif: 'https://i.ytimg.com/an_webp/CL-f66Ks_yA/mqdefault_6s.webp?du=3000&sqp=COCMoZ4G&rs=AOn4CLDuAV41_2Ett-9R75Wu0Dw1IBU0pQ',
+    gif: '../../assets/img/vid3.webp',
     safeEmbed: '',
     likeCount: 1520,
     views: 104411,
@@ -63,14 +63,14 @@ export const contents: card[] = [
   },
   {
     id: 4,
-    thumbnail: '../assets/img/vid4.jpg',
+    thumbnail: 'https://img.youtube.com/vi/JkBwd-k82IE/mqdefault.jpg',
     channelName: '에익쿠',
     channelProfile:
       'https://yt3.ggpht.com/ytc/AMLnZu9Y3Du2zy4Vg6laGb_3-eWKECdEUDneuwqpqs5-fA=s88-c-k-c0x00ffffff-no-rj',
     channelSubCount: 306189,
     title: 'MBTI in Senior Center',
     embed: 'https://www.youtube.com/embed/JkBwd-k82IE',
-    gif: 'https://i.ytimg.com/an_webp/JkBwd-k82IE/mqdefault_6s.webp?du=3000&sqp=COWYoZ4G&rs=AOn4CLD8Mp8ccnblGLdrSiTksDyqCCHHwg',
+    gif: '../../assets/img/vid4.webp',
     safeEmbed: '',
     likeCount: 2797,
     views: 55891,
@@ -83,7 +83,7 @@ export const contents: card[] = [
   },
   {
     id: 5,
-    thumbnail: '../assets/img/vid5.jpg',
+    thumbnail: 'https://img.youtube.com/vi/0DOMlNJ9sOk/maxresdefault.jpg',
     channelName: 'The New Travel',
     channelProfile:
       'https://yt3.ggpht.com/n9ZfVxi2_kdet0XKTyQX79l_w2ISOMVEU3sOEWV1DMRyOef4AsYoq2bE12HYnUlFteqrw8OzXQ=s88-c-k-c0x00ffffff-no-rj',
@@ -91,7 +91,7 @@ export const contents: card[] = [
     title: 'London, how many languages do you speak?',
     embed: 'https://www.youtube.com/embed/0DOMlNJ9sOk',
     safeEmbed: '',
-    gif: 'https://i.ytimg.com/an_webp/0DOMlNJ9sOk/mqdefault_6s.webp?du=3000&sqp=CLeZoZ4G&rs=AOn4CLAHZKbIcfwt5hvSlgttxXMXccRf3g',
+    gif: '../../assets/img/vid5.webp',
     likeCount: 35988,
     views: 1542819,
     date: new Date(2022, 11, 25),
@@ -103,7 +103,7 @@ export const contents: card[] = [
   },
   {
     id: 6,
-    thumbnail: '../assets/img/vid6.jpg',
+    thumbnail: 'https://img.youtube.com/vi/qCcnF5Jk4ZE/maxresdefault.jpg',
     channelName: 'Benj Haisch',
     channelProfile:
       'https://yt3.ggpht.com/ytc/AMLnZu9UAfBSjgPJhlW-L-4rMnYh5r9DBEKMlMAzRkkm81o=s88-c-k-c0x00ffffff-no-rj',
@@ -111,7 +111,7 @@ export const contents: card[] = [
     title: 'The $50 Film Camera You Should Actually Buy.',
     embed: 'https://www.youtube.com/embed/qCcnF5Jk4ZE',
     safeEmbed: '',
-    gif: 'https://i.ytimg.com/an_webp/qCcnF5Jk4ZE/mqdefault_6s.webp?du=3000&sqp=CIKUoZ4G&rs=AOn4CLAdE3bnF2XbKLZ8EKM7i-GccRFWQA',
+    gif: '../../assets/img/vid6.webp',
     likeCount: 18897,
     views: 546429,
     date: new Date(2023, 0, 17),
@@ -123,7 +123,7 @@ export const contents: card[] = [
   },
   {
     id: 7,
-    thumbnail: '../assets/img/vid7.jpg',
+    thumbnail: 'https://img.youtube.com/vi/bXcLbGs9rlM/mqdefault.jpg',
     channelName: 'F:Eight',
     channelProfile:
       'https://yt3.ggpht.com/y0_55vKIPAKpWYOUUeLSLKCULCKLJloGbd_g0FYJIF--GZkgOFY4VLHlJGHmCmZX31wGBgDwDg=s88-c-k-c0x00ffffff-no-nd-rj',
@@ -131,7 +131,7 @@ export const contents: card[] = [
     title: 'Ditto // Slowed to Perfection',
     embed: 'https://www.youtube.com/embed/bXcLbGs9rlM',
     safeEmbed: '',
-    gif: 'https://i.ytimg.com/an_webp/bXcLbGs9rlM/mqdefault_6s.webp?du=3000&sqp=CMuToZ4G&rs=AOn4CLBvIv29ZL0VbincUMi1dvE3xcF4GA',
+    gif: '../../assets/img/vid7.webp',
     likeCount: 8880,
     views: 100192,
     date: new Date(2022, 5, 1),
@@ -143,7 +143,7 @@ export const contents: card[] = [
   },
   {
     id: 8,
-    thumbnail: '../assets/img/vid8.jpg',
+    thumbnail: 'https://img.youtube.com/vi/3ARVIkbbf3o/maxresdefault.jpg',
     channelName: 'Zach Star',
     channelProfile:
       'https://yt3.ggpht.com/ytc/AMLnZu_ix5z4zrFoi9h0bWrH1ZpOvC8jOYLyOxnO42NUBQ=s88-c-k-c0x00ffffff-no-rj',
@@ -151,7 +151,7 @@ export const contents: card[] = [
     title: 'Random things that will (likely) surprise you',
     embed: 'https://www.youtube.com/embed/3ARVIkbbf3o',
     safeEmbed: '',
-    gif: 'https://i.ytimg.com/an_webp/3ARVIkbbf3o/mqdefault_6s.webp?du=3000&sqp=CJSMoZ4G&rs=AOn4CLBVQOBerUHixjeK3fSDT1f5tNzYqQ',
+    gif: '../../assets/img/vid8.webp',
     likeCount: 71820,
     views: 1823555,
     date: new Date(2015, 3, 15),
