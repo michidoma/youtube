@@ -9,33 +9,41 @@ export class NavBarComponent {
   signedIn: string = '';
   pop: boolean = false;
   username: string = '';
-  darkMode: string = '0';
-  srcLogo: string = '/src/assets/img/logo.png';
+  srcLogo: string = '/assets/img/logo.png';
+  theme: string = 'Light';
 
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.signedIn = localStorage.getItem('loggedIn') || '-1';
     this.username = localStorage.getItem('username') || 'username';
     if (localStorage.getItem('darkMode') === '1') {
-      // this.srcLogo = '/src/assets/img/logo-dark-mode.png';
+      this.srcLogo = '/assets/img/logo-dark-mode.png';
       document.body.classList.add('dark-theme');
+      this.theme = 'Dark';
+    } else {
+      this.srcLogo = '/assets/img/logo.png';
+      this.theme = 'Light';
     }
   }
 
-  getValue(val: string) {
+  getSearchKey(val: string) {
     this.router.navigate(['/results'], {
       queryParams: { search_query: val },
     });
   }
 
-  setLogAndReload(val: string): void {
-    localStorage.setItem('loggedIn', val);
+  signOut(): void {
+    localStorage.setItem('loggedIn', '0');
+    localStorage.setItem('darkMode', '0');
     window.location.reload();
   }
 
   toggleDarkTheme() {
     document.body.classList.toggle('dark-theme');
-    this.darkMode = localStorage.getItem('darkMode') === '1' ? '0' : '1';
-    localStorage.setItem('darkMode', this.darkMode);
+    window.location.reload();
+    localStorage.setItem(
+      'darkMode',
+      localStorage.getItem('darkMode') === '1' ? '0' : '1'
+    );
   }
 }

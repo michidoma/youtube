@@ -1,33 +1,47 @@
 body {
-    --bg-color: white;
     --context-color: black;
-    --btn-bg-color: #f8f8f8;
-    --btn-bg-darker-color: #f9f9f9;
+    --bg-color: white;
     --input-bg-color: white;
     --border-color: #cccccc;
-    --btn-hover-bg: #f0f0f0;
-    --btn-hover-bg-lighter: #e0e0e0;
-    --btn-hover-bg-mid: #e5e5e5;
+    --btn-search-bg: #f8f8f8;
+    --btn-search-bg-hover: #f0f0f0;
+    --btn-voice-bg: #f9f9f9;
+    --btn-voice-bg-hover: #e0e0e0;
+    --btn-bg-hover: #e5e5e5;
     --pop-up-bg: white;
-    --pop-up-hover-bg: #f2f2f2;
-    --btn-hover-bg-darker: #f2f2f2;
-    --btn-active-hover: #e6e6e6;
+    --pop-up-border-bottom-color: #e5e5e5;
+    --pop-up-option-bg-hover: #f2f2f2;
+    --border-bottom-color: #e9e9e9;
+    --option-bg-hover: #f2f2f2;
+    --option-active-hover: #e6e6e6;
+    --text-description: #606060;
+    --scale-bg-color: white;
+    --scale-option-bg-color: #f2f2f2;
+    --scale-option-bg-hover: #e5e5e3;
+    --btn-filter-bg-hover: #e5e5e5;
 }
 
 body.dark-theme {
-    --bg-color: #0f0f0f;
     --context-color: white;
-    --btn-bg-color: #222222;
-    --btn-bg-darker-color: #181818;
+    --bg-color: #0f0f0f;
     --input-bg-color: #121212;
     --border-color: #303030;
-    --btn-hover-bg: #222222;
-    --btn-hover-bg-lighter: #303030;
-    --btn-hover-bg-mid: #272727;
+    --btn-search-bg: #222222;
+    --btn-search-bg-hover: #222222;
+    --btn-voice-bg: #181818;
+    --btn-voice-bg-hover: #303030;
+    --btn-bg-hover: #272727;
     --pop-up-bg: #282828;
-    --pop-up-hover-bg: #3d3d3d;
-    --btn-hover-bg-darker: #272727;
-    --btn-active-hover: #3d3d3d;
+    --pop-up-border-bottom-color: #393939;
+    --pop-up-option-bg-hover: #3d3d3d;
+    --border-bottom-color: #272727;
+    --option-bg-hover: #272727;
+    --option-active-hover: #3d3d3d;
+    --text-description: #aaaaaa;
+    --scale-bg-color: rgba(32,32,32,0.95);
+    --scale-option-bg-color: #373737;
+    --scale-option-bg-hover: #4d4d4d;
+    --btn-filter-bg-hover: #3f3f3f;
 }
 
 body {
@@ -52,11 +66,7 @@ body {
                 margin-left: 17px;
                 margin-right: 17px;
                 cursor: pointer;
-            }
-            i:hover {
-                background-color: #e5e5e5;
-            }
-            
+            }            
             img {
                 cursor: pointer;
                 padding: 10px 0px;
@@ -85,13 +95,12 @@ body {
             #search {
                 border: 1px solid var(--border-color);
                 border-radius: 0px 15px 15px 0px;
-                border-color: var(--border-color);
                 padding: 0px 20px 0px 16px;
                 color: var(--context-color);
-                background-color: var(--btn-bg-color);
+                background-color: var(--btn-search-bg);
             }
             #search:hover{
-                background-color: var(--btn-hover-bg);
+                background-color: var(--btn-search-bg-hover);
             }
             #voice {
                 border: none;
@@ -99,10 +108,10 @@ body {
                 margin: 0px 5px;
                 padding: 0px 15px;
                 color: var(--context-color);
-                background-color: var(--btn-bg-darker-color);
+                background-color: var(--btn-voice-bg);
             }
             #voice:hover{
-                background-color: var(--btn-hover-bg-lighter);
+                background-color: var(--btn-voice-bg-hover);
             }
         }
         .nav-right {
@@ -126,9 +135,9 @@ body {
             }
             .notifications, .create {
                 fill: var(--context-color);
-                height: 20px;
-                width: 20px;
-                border-radius: 20px;
+                height: 24px;
+                width: 24px;
+                border-radius: 24px;
                 padding: 8px;
                 margin-right: 13px;
             }
@@ -136,7 +145,7 @@ body {
                 cursor: pointer;
             }
             .notifications:hover, .create:hover {
-                background-color: var(--btn-hover-bg-mid);
+                background-color: var(--btn-bg-hover);
             }
         }
         .pop-up {
@@ -147,7 +156,7 @@ body {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             color: var(--context-color);
             > div {
-                border-bottom: 1px solid #e5e5e5;
+                border-bottom: 1px solid var(--pop-up-border-bottom-color);
             }
             > div:first-child {
                 padding: 16px;
@@ -173,7 +182,7 @@ body {
                     cursor: pointer;
                 }
             }
-            > div:nth-child(2), > div:last-child {
+            > div:nth-child(2), > div:nth-child(3), > div:last-child {
                 padding: 8px 0px;
                 > div {
                     padding: 8px 36px 8px 16px;
@@ -188,7 +197,7 @@ body {
                     }
                 }
                 > div:hover {
-                    background-color: var(--pop-up-hover-bg);
+                    background-color: var(--pop-up-option-bg-hover);
                 }
             }
             > div:last-child {
@@ -211,7 +220,7 @@ body {
             z-index: 2;
             color: var(--context-color) ;
             background-color: var(--bg-color);
-            box-shadow: 100px 0px 0px 10000px rgba(0, 0, 0, 0.3);
+            box-shadow: 100px 0px 0px 10000px rgba(0, 0, 0, 0.4);
             transition: 0.1s;
             .menu {
                 display: flex;
@@ -234,7 +243,7 @@ body {
             }
             > div {
                 padding: 15px 0px;
-                border-bottom: 1px solid #e9e9e9;
+                border-bottom: 1px solid var(--border-bottom-color);
                 .shorts {
                     img {
                         margin-left: 2.5px;
@@ -261,13 +270,13 @@ body {
                     }
                 }
                 .option:hover {
-                    background-color: var(--btn-hover-bg-mid);
+                    background-color: var(--option-bg-hover);
                 }
                 .active-link {
-                    background-color: var(--btn-hover-bg-mid);
+                    background-color: var(--option-bg-hover);
                 }
                 .active-link:hover {
-                    background-color: var(--btn-active-hover);
+                    background-color: var(--option-active-hover);
                 }
             }
             .sign-in {
@@ -314,9 +323,8 @@ body {
                     cursor: pointer;
                 }
                 i:hover {
-                    background-color: var(--btn-hover-bg-mid);
-                }
-                
+                    background-color: var(--btn-bg-hover);
+                }   
                 img {
                     display: none;
                 }
@@ -328,32 +336,30 @@ body {
                 display: block;
                 margin-top: 20px;
                 padding: 0px 4px;
-                .option {
-                    padding: 16px 0px 14px 0px;
-                    border-radius: 10px;
-                    text-align: center;
-                    cursor: pointer;
-                    img {
-                        height: 24px;
-                        width: 24px;
-                        margin-bottom: 6px;
-                    }
-                    svg {
-                        height: 24px;
-                        fill: var(--context-color);
-                    }
-                    p {
-                        font-size: 0.6rem;
-                        margin: 0px;
-                    }
+                
+            }
+            > div:nth-child(3){
+                display: block;
+                > div:last-child {
+                    display: none;
                 }
-                .shorts img {
+            }
+            .option {
+                padding: 16px 0px 14px 0px;
+                border-radius: 10px;
+                text-align: center;
+                cursor: pointer;
+                svg {
                     height: 24px;
-                    width: 18px;
+                    fill: var(--context-color);
                 }
-                .option:hover {
-                    background-color: var(--btn-hover-bg-darker);
+                p {
+                    font-size: 0.6rem;
+                    margin: 0px;
                 }
+            }
+            .option:hover {
+                background-color: var(--option-bg-hover);
             }
         }
         .main { 
@@ -373,16 +379,15 @@ body {
     padding: 10px;
     column-gap: 12px;
     row-gap: 30px;
+    background-color: var(--bg-color);
     .grid-item {
         height: 290px;
-        background-color: var(--bg-color);
         font-size: 30px;
         border-radius: 15px;
         border-color: transparent;
         cursor: pointer;
         .thumbnail {
             position: relative;
-            background-color: var(--bg-color);
             img {
                 width: 100%;
                 border-radius: 15px;
@@ -395,7 +400,7 @@ body {
         .description {
             display: flex;
             margin: 5px 0px;
-            background-color: var(--bg-color);
+            position: relative;
             div:first-child {
                 margin-left: 15px;
             }
@@ -405,12 +410,15 @@ body {
                     font-family: Arial, Helvetica, sans-serif;
                     text-decoration: none;
                     font-size: 12px;
-                    color: #606060;
+                    color: var(--text-description);
                     margin: 0px;
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     -webkit-box-orient: vertical;
+                }
+                .channel-name:hover {
+                    color: var(--context-color);
                 }
             }
             .info > p:first-child {
@@ -418,6 +426,14 @@ body {
                 color: var(--context-color);
                 padding-bottom: 5px;
                 line-height: 21px;
+            }
+            div:last-child {
+                position: absolute;
+                right: 0;
+                svg {
+                    width: 24px;
+                    fill: var(--context-color);
+                }
             }
             img {
                 height: 35px;
@@ -449,26 +465,24 @@ body {
         display: none;
         color: var(--context-color);
         div {
-            background-color: var(--pop-up-hover-bg);
+            background-color: var(--scale-option-bg-color);
             display: flex;
             height: 25px;
             align-items: center;
             justify-content: center;
             border-radius: 15px;
             margin: 5px;
-            cursor: pointer;
-            img {
+            svg {
                 height: 70%;
-                border-radius: 0px;
                 margin-right: 5px;
-                width: auto;
+                fill: var(--context-color);
             }
             p {
                 font-size: 12px;
             }
         }
         div:hover {
-            background-color: #e5e5e5;
+            background-color: var(--scale-option-bg-hover);
         }
     }
 }
@@ -476,9 +490,11 @@ body {
 .scale:hover {
     transform: scale(1.15);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--scale-bg-color);
     z-index: 5;
     .invisible {
         display: block;
+        opacity: 0.95;
     }
     .thumbnail a {
         display: none;
@@ -488,10 +504,10 @@ body {
 .filter {
     height: 36px;
     width: calc(100vw - 94px);
+    height: auto;
     padding: 20px 0px 10px 10px;
     position: sticky;
     top: 56px;
-    background-color: white;
     overflow: scroll;
     white-space: nowrap;
     z-index: 2;
@@ -500,18 +516,18 @@ body {
         font-size: 14px;
         margin-right: 7px;
         color: var(--context-color);
-        background-color: var(--btn-hover-bg-darker);
+        background-color: var(--option-bg-hover);
         border-radius: 7px;
         border: none;
         padding: 10px;
         cursor: pointer;
     }
-    button:first-child {
+    button:first-child, button:first-child:hover {
         background-color: var(--context-color);
         color: var(--bg-color);
     }
     button:hover {
-        background-color: var(--btn-hover-bg-mid);
+        background-color: var(--btn-filter-bg-hover);
     }
 }
 .filter::-webkit-scrollbar {
@@ -529,7 +545,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: gray; 
+    background: var(--text-description); 
     border-radius: 10px;
 }
 
