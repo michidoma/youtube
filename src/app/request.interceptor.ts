@@ -18,7 +18,6 @@ export class RequestInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     if (request.url === '/src/app/api/datas.ts') {
-      console.log('request.url: ', request.url, '\n body: ', contents);
       return of(new HttpResponse({ body: contents }));
     }
     console.log('request.url: ', request.url, '\n body: ', request);
