@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { card } from '../models/card';
+import { card } from '../shared/card.model';
 
 @Component({
   selector: 'app-categories',
@@ -9,8 +9,8 @@ import { card } from '../models/card';
   styles: [],
 })
 export class CategoriesComponent implements OnInit {
-  filtered: card[] = [];
-  cat: String = '';
+  filtered?: card[];
+  cat?: String;
 
   constructor(
     private activatedRoute: ActivatedRoute,

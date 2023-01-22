@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { card } from 'src/app/shared/card.model';
 
 @Component({
   selector: 'app-side-video-card',
@@ -6,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styles: [],
 })
 export class SideVideoCardComponent implements OnInit {
-  @Input() itemData: any;
-  imgSrc: string | undefined;
+  @Input() itemData: card | any;
+  imgSrc!: string;
   ngOnInit() {
     this.imgSrc = this.itemData.thumbnail;
   }

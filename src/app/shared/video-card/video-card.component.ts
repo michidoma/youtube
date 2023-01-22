@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { card } from '../../../models/card';
+import { card } from '../card.model';
 
 @Component({
   selector: 'app-video-card',
@@ -7,7 +7,7 @@ import { card } from '../../../models/card';
 })
 export class VideoCardComponent implements OnInit {
   @Input() itemData: card | any;
-  imgSrc: string | undefined;
+  imgSrc?: string;
   ngOnInit() {
     this.imgSrc = this.itemData.thumbnail;
   }

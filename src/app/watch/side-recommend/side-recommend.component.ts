@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { card } from '../models/card';
+import { card } from '../../shared/card.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styles: [],
 })
 export class SideRecommendComponent implements OnInit {
-  @Input() content: card | undefined;
-  contents: card[] | undefined;
+  @Input() content?: card;
+  contents?: card[];
 
   constructor(private http: HttpClient) {}
 

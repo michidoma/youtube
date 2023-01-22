@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { card } from '../models/card';
+import { card } from '../../shared/card.model';
 
 @Component({
   selector: 'app-details',
@@ -8,11 +8,11 @@ import { card } from '../models/card';
   styles: [],
 })
 export class DetailsComponent {
-  @Input() content: card | any;
+  @Input() content?: card;
   showMore: boolean = false;
-  loggedIn: number | undefined;
+  loggedIn?: number;
   sub: boolean = false;
-  signedIn: string = '';
+  signedIn?: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,

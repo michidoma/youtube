@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { card } from '../models/card';
+import { card } from '../../shared/card.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './content-section.component.html',
 })
 export class ContentSectionComponent {
-  contents: card[] = [];
+  contents?: card[];
 
   constructor(private http: HttpClient) {}
 

@@ -6,7 +6,7 @@ import {
   ActivatedRouteSnapshot,
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { card } from '../models/card';
+import { card } from '../shared/card.model';
 
 @Injectable({
   providedIn: 'root',

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './nav-bar.component.html',
 })
 export class NavBarComponent {
-  signedIn: string = '';
+  signedIn?: string;
   pop: boolean = false;
   username: string = '';
   srcLogo: string = '/assets/img/logo.png';

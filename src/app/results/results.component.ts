@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { card } from 'src/app/models/card';
+import { card } from 'src/app/shared/card.model';
 
 @Component({
   selector: 'app-results',
@@ -8,7 +8,7 @@ import { card } from 'src/app/models/card';
   styles: [],
 })
 export class ResultsComponent {
-  resultArray: card[] = [];
+  resultArray?: card[];
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((resolversData) => {
