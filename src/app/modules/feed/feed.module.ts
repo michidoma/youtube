@@ -5,12 +5,19 @@ import { LibraryComponent } from './library/library.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ShortsComponent } from './shorts/shorts.component';
 import { SharedModule } from '../shared/shared.module';
+import { SubscriptionsResolver } from './subscriptions/subscriptions.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: 'library', pathMatch: 'full' },
-  { path: 'subscriptions', component: SubscriptionsComponent },
-  { path: 'library', component: LibraryComponent },
-  { path: 'shorts', component: ShortsComponent },
+  {
+    title: 'Subscriptions',
+    path: 'subscriptions',
+    component: SubscriptionsComponent,
+    resolve: { subFilteredData: SubscriptionsResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  { title: 'Library', path: 'library', component: LibraryComponent },
+  { title: 'Shorts', path: 'shorts', component: ShortsComponent },
 ];
 
 @NgModule({

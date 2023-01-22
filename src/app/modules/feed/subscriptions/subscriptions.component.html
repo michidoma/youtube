@@ -1,7 +1,38 @@
 <app-nav-bar></app-nav-bar>
 <section>
   <app-side-bar [subscriptions]="subscriptions"></app-side-bar>
-  <div>
-    <p>subscriptions works! subscriptions works!</p>
+  <div class="subscriptions-container">
+    <div>
+      <div class="header">
+        <div><b>Today</b></div>
+        <div class="display-options">
+          <button><i class="material-icons">grid_on</i></button>
+          <button><i class="material-icons">list</i></button>
+        </div>
+      </div>
+      <div class="grid-container">
+        <!-- <div *ngFor="let data of filteredData">
+          <app-video-card [itemData]="data"></app-video-card>
+        </div> -->
+      </div>
+    </div>
+    <div>
+      <div class="header">
+        <div><b>This Week</b></div>
+      </div>
+      <div>THIS WEEK CONTENTS</div>
+    </div>
+    <div>
+      <div class="header">
+        <div><b>This Month</b></div>
+      </div>
+      <div>THIS MONTH CONTENTS</div>
+    </div>
+    <div>
+      <div class="header">
+        <div><b>This Year</b></div>
+      </div>
+      <div>THIS YEAR CONTENTS</div>
+    </div>
   </div>
 </section>
