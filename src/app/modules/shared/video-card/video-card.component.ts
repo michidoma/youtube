@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { card } from '../models/card';
+import { card } from '../../../models/card';
 
 @Component({
   selector: 'app-video-card',

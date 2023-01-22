@@ -20,9 +20,6 @@ export class DetailsComponent {
   ) {}
 
   ngOnInit(): void {
-    // this.activatedRoute.queryParams.subscribe((params) => {
-    //   this.loggedIn = +params['log'];
-    // });
     this.signedIn = localStorage.getItem('loggedIn') || '-1';
   }
 

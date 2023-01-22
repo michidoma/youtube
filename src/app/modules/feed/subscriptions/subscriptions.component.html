@@ -6,33 +6,60 @@
       <div class="header">
         <div><b>Today</b></div>
         <div class="display-options">
-          <button><i class="material-icons">grid_on</i></button>
-          <button><i class="material-icons">list</i></button>
+          <button (click)="grid = true">
+            <i class="material-icons">grid_on</i>
+          </button>
+          <button (click)="grid = false">
+            <i class="material-icons">list</i>
+          </button>
         </div>
       </div>
-      <div class="grid-container">
-        <!-- <div *ngFor="let data of filteredData">
+      <div [ngClass]="grid ? 'grid-container subscription-grid' : 'list'">
+        <div *ngFor="let data of filteredData.today">
           <app-video-card [itemData]="data"></app-video-card>
-        </div> -->
+        </div>
       </div>
     </div>
     <div>
       <div class="header">
         <div><b>This Week</b></div>
       </div>
-      <div>THIS WEEK CONTENTS</div>
+      <div [ngClass]="grid ? 'grid-container subscription-grid' : 'list'">
+        <app-video-card
+          *ngFor="let data of filteredData.thisWeek"
+          [itemData]="data"
+        ></app-video-card>
+      </div>
     </div>
     <div>
       <div class="header">
         <div><b>This Month</b></div>
       </div>
-      <div>THIS MONTH CONTENTS</div>
+      <div [ngClass]="grid ? 'grid-container subscription-grid' : 'list'">
+        <div *ngFor="let data of filteredData.thisMonth">
+          <app-video-card [itemData]="data"></app-video-card>
+        </div>
+      </div>
     </div>
     <div>
       <div class="header">
         <div><b>This Year</b></div>
       </div>
-      <div>THIS YEAR CONTENTS</div>
+      <div [ngClass]="grid ? 'grid-container subscription-grid' : 'list'">
+        <div *ngFor="let data of filteredData.thisYear">
+          <app-video-card [itemData]="data"></app-video-card>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="header">
+        <div><b>Your Subscriptions</b></div>
+      </div>
+      <div [ngClass]="grid ? 'grid-container subscription-grid' : 'list'">
+        <div *ngFor="let data of filteredData.other">
+          <app-video-card [itemData]="data"></app-video-card>
+        </div>
+      </div>
     </div>
   </div>
 </section>

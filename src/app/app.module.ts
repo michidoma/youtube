@@ -16,12 +16,8 @@ import { SideVideoCardComponent } from './side-video-card/side-video-card.compon
 import { CommentComponent } from './comment/comment.component';
 import { ResultsComponent } from './results/results.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { VideoCardComponent } from './video-card/video-card.component';
 
-import { DatePipe } from './date.pipe';
-import { NumberFormatPipe } from './number-format.pipe';
 import { RequestInterceptor } from './request.interceptor';
-import { DarkModeDirective } from './dark-mode.directive';
 
 @NgModule({
   declarations: [
@@ -33,13 +29,9 @@ import { DarkModeDirective } from './dark-mode.directive';
     DetailsComponent,
     SideRecommendComponent,
     SideVideoCardComponent,
-    VideoCardComponent,
     CommentComponent,
     ResultsComponent,
-    DatePipe,
-    NumberFormatPipe,
     CategoriesComponent,
-    DarkModeDirective,
   ],
   imports: [
     BrowserModule,

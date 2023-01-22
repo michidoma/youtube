@@ -1,7 +1,9 @@
 <app-nav-bar></app-nav-bar>
 <section>
   <app-side-bar [library]="library"></app-side-bar>
-  <div>
-    <p>library works! library works!</p>
+  <div class="grid-container categories library-container">
+    <div *ngFor="let item of contents; let i = index">
+      <app-video-card [itemData]="item"></app-video-card>
+    </div>
   </div>
 </section>

@@ -19,6 +19,8 @@ body {
     --scale-option-bg-color: #f2f2f2;
     --scale-option-bg-hover: #e5e5e3;
     --btn-filter-bg-hover: #e5e5e5;
+    --btn-subscribe-bg: black;
+    --btn-subscribe-bg-hover: #272727; 
 }
 
 body.dark-theme {
@@ -42,6 +44,8 @@ body.dark-theme {
     --scale-option-bg-color: #373737;
     --scale-option-bg-hover: #4d4d4d;
     --btn-filter-bg-hover: #3f3f3f;
+    --btn-subscribe-bg: #272727;
+    --btn-subscribe-bg-hover: #d9d9d9; 
 }
 
 body {
@@ -65,6 +69,7 @@ body {
                 padding: 6px;
                 margin-left: 17px;
                 margin-right: 17px;
+                color: var(--context-color);
                 cursor: pointer;
             }            
             img {
@@ -592,6 +597,7 @@ body {
         border: none;
     }
     .short-details {
+        color: var(--context-color);
         margin-top: 12px;
         margin-bottom: 24px;
         h1 {
@@ -623,10 +629,10 @@ body {
                         overflow: hidden;
                         text-overflow: ellipsis;
                         text-decoration: none;
-                        color: black;
+                        color: var(--context-color);
                     }
                     p {
-                        color: #606060;
+                        color: var(--text-description);
                         font-size: 0.8rem;
                         margin: 0;
                         margin-right: 4px;
@@ -635,13 +641,13 @@ body {
                 .subscribe {
                     margin: 0px;
                     :hover{
-                        background-color: #272727;
+                        background-color: var(--btn-subscribe-bg-hover);
                     }
                     button {
                         display: flex;
                         padding: 0px 16px;
-                        background-color: black;
-                        color: white;
+                        background-color: var(--context-color);
+                        color: var(--bg-color);
                         border: none;
                         height: 36px;
                         font-size: 14px;
@@ -665,11 +671,11 @@ body {
                 }
                 #logged {
                     button {
-                        background-color: #f2f2f2;
-                        color: black;
+                        background-color: var(--btn-subscribe-bg);
+                        color: var(--context-color);
                     }
                     button:hover, button div:hover, span:hover{
-                        background-color: #e5e5e5;
+                        background-color: var(--btn-filter-bg-hover);
                     }
                 }
             }
@@ -724,6 +730,8 @@ body {
                     margin: 4px 0px;
                     align-items: center;
                     cursor: pointer;
+                    color: var(--context-color);
+                    background-color: var(--option-bg-hover);
                     i {
                         font-size: 20px;
                         width: 24px;
@@ -743,7 +751,7 @@ body {
                 font-size: 0.9rem;
                 line-height: 20px;
                 border-radius: 20px;
-                background-color: #f2f2f2;
+                background-color: var(--option-bg-hover);
                 div {
                     margin-left: 0;
                     padding: 5px 0px;
@@ -764,6 +772,7 @@ body {
         }
     }
     .comment-section {
+        color: var(--context-color);
         .header {
             .sort {
                 display: flex;
@@ -798,6 +807,7 @@ body {
                     font-size: 13px;
                     border: none;
                     border-bottom: 1px solid #e5e5e5;
+                    background-color: transparent;
                 }
             }
         }
@@ -846,7 +856,7 @@ body {
             width: 100%;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
-            color: #606060;
+            color: var(--text-description);
             display: -webkit-box;
             -webkit-line-clamp: 2;
             overflow: hidden;
@@ -854,7 +864,7 @@ body {
             line-height: 20px;
             h3 {
                 font-size: 14px;
-                color: black;
+                color: var(--context-color);
                 margin: 0px 0px 4px 0px;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
@@ -1022,7 +1032,7 @@ body {
     position: relative;
     left: 100px;
     .items {
-        width: calc(100vw - 130px);
+        width: calc(100vw - 135px);
         margin-bottom: 10px;
         margin-right: 0px;
         cursor: pointer;
@@ -1207,13 +1217,16 @@ section > .shorts {
     left: 72px;
     width: calc(100vw - 120px);
     padding: 0px 20px;
-    border: 1px solid black;
     .header {
         margin-top: 24px;
         height: 40px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: var(--context-color);
+        > div:first-child {
+            margin-left: 10px;
+        }
         .display-options {
             display: flex;
             button {
@@ -1223,11 +1236,90 @@ section > .shorts {
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
+                i {
+                    color: var(--context-color);
+                }
             }
             button:hover {
                 background-color: var(--btn-bg-hover);
             }
         }
+    }
+    .scale:hover {
+        background-color: transparent;
+    }
+}
+
+.subscription-grid {
+    .scale:hover {
+        transform: none;
+        box-shadow: none;
+        .invisible{
+            display: none;
+        }
+    }
+}
+
+.list {
+    .grid-item {
+        height: 100px;
+        margin-bottom: 50px;
+        .scale {
+            display: flex;
+            margin-left: 10px;
+            cursor: pointer;
+            .thumbnail{
+                position: relative;
+                img {
+                    height: 138px;
+                    border-radius: 10px;
+                    margin-right: 16px;
+                }
+                .duration-time {
+                    right: 20px;
+                    bottom: 7px;
+                }
+            }
+            .description {
+                > div:first-child img {
+                    display: none;
+                }
+                .info {
+                    > p:first-child {
+                        font-size: 18px;
+                        margin-right: 8px;
+                        color: var(--context-color);
+                    }
+                    p {
+                        font-size: 12px;
+                        margin: 0;
+                        margin-bottom: 5px;
+                        color: var(--text-description);
+                    }
+                }
+                svg {
+                    height: 24px;
+                    width: 24px;
+                    position: absolute;
+                    right: 100px;
+                    top: 0;
+                }
+            }
+            .invisible {
+                display: none;
+            }
+        }
+        .scale:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.library-container {
+    margin-top: 20px;
+    .scale:hover {
+        background-color: transparent;
     }
 }
 
