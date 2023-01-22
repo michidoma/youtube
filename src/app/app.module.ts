@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { FilterComponent } from './filter/filter.component';
-import { VideoCardComponent } from './video-card/video-card.component';
 import { HomeComponent } from './home/home.component';
 import { WatchComponent } from './watch/watch.component';
 import { DetailsComponent } from './details/details.component';
@@ -17,6 +16,7 @@ import { SideVideoCardComponent } from './side-video-card/side-video-card.compon
 import { CommentComponent } from './comment/comment.component';
 import { ResultsComponent } from './results/results.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { VideoCardComponent } from './video-card/video-card.component';
 
 import { DatePipe } from './date.pipe';
 import { NumberFormatPipe } from './number-format.pipe';
@@ -28,12 +28,12 @@ import { DarkModeDirective } from './dark-mode.directive';
     AppComponent,
     ContentSectionComponent,
     FilterComponent,
-    VideoCardComponent,
     HomeComponent,
     WatchComponent,
     DetailsComponent,
     SideRecommendComponent,
     SideVideoCardComponent,
+    VideoCardComponent,
     CommentComponent,
     ResultsComponent,
     DatePipe,
