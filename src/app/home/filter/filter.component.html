@@ -1,5 +1,10 @@
 <div class="filter">
-  <button *ngFor="let data of httpData" [title]="data.name">
+  <button
+    *ngFor="let data of filtersData"
+    [ngClass]="{ active: activeButton === data.listOrder }"
+    [title]="data.name"
+    (click)="onClickFilter(data.name, data.listOrder)"
+  >
     {{ data.name }}
   </button>
 </div>

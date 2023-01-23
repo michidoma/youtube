@@ -13,6 +13,7 @@ export class NavBarComponent {
   theme: string = 'Light';
 
   constructor(private router: Router) {}
+
   ngOnInit(): void {
     this.signedIn = localStorage.getItem('loggedIn') || '-1';
     this.username = localStorage.getItem('username') || 'username';

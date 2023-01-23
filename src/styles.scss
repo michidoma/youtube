@@ -384,6 +384,7 @@ body {
     padding: 10px;
     column-gap: 12px;
     row-gap: 30px;
+    margin-right: 10px;
     background-color: var(--bg-color);
     .grid-item {
         height: 290px;
@@ -527,7 +528,7 @@ body {
         padding: 10px;
         cursor: pointer;
     }
-    button:first-child, button:first-child:hover {
+    button.active, button.active:hover {
         background-color: var(--context-color);
         color: var(--bg-color);
     }
@@ -535,6 +536,7 @@ body {
         background-color: var(--btn-filter-bg-hover);
     }
 }
+
 .filter::-webkit-scrollbar {
     height: 7px;
 }

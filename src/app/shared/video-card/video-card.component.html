@@ -1,4 +1,8 @@
-<div class="grid-item">
+<div
+  class="grid-item"
+  [routerLink]="['/watch']"
+  [queryParams]="{ id: itemData.id }"
+>
   <div class="scale">
     <div class="thumbnail">
       <img

@@ -2,11 +2,7 @@
   <app-filter></app-filter>
   <div class="grid-container">
     <div *ngFor="let content of contents">
-      <app-video-card
-        [itemData]="content"
-        [routerLink]="['/watch']"
-        [queryParams]="{ id: content.id }"
-      ></app-video-card>
+      <app-video-card [itemData]="content"></app-video-card>
     </div>
   </div>
 </div>
