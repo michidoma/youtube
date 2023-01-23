@@ -1,42 +1,39 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot,
-} from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { DataService } from '../services/data.service';
 import { card } from '../shared/card.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ResultsResolver implements Resolve<any> {
-  constructor(private http: HttpClient) {}
-  resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<any> {
-    let contents: card[] = [];
-    this.http.get<any>('/src/app/api/datas.ts').subscribe((data) => {
-      contents = data;
+  constructor(private dataService: DataService) {}
+
+  contents: card[] = [];
+
+  resolve(route: ActivatedRouteSnapshot): Observable<any> {
+    this.dataService.getContentsData$().subscribe((data) => {
+      this.contents = data;
     });
 
     const resultArray: card[] = [];
-    let searchQuery = route.queryParamMap.get('search_query') ?? [];
-    let searchArray: string[] = String(searchQuery).split(' ');
+    const searchQuery = route.queryParamMap.get('search_query') ?? [];
+    const searchArray: string[] = String(searchQuery).split(' ');
+
     for (var j = 0; j < searchArray.length; j++) {
-      for (var i = 0; i < contents.length; i++) {
+      for (var i = 0; i < this.contents.length; i++) {
         if (
-          contents[i].keywords.filter((str) => str == searchArray[j]).length !=
-          0
+          this.contents[i].keywords.filter((str) => str == searchArray[j])
+            .length != 0
         ) {
-          if (resultArray.indexOf(contents[i]) === -1)
-            resultArray.push(contents[i]);
+          if (resultArray.indexOf(this.contents[i]) === -1)
+            resultArray.push(this.contents[i]);
         }
       }
     }
-    console.log('Resolver executed');
+
     return of(resultArray);
   }
 }

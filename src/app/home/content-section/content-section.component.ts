@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 import { card } from '../../shared/card.model';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-content-section',
@@ -9,11 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class ContentSectionComponent {
   contents?: card[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.http.get<any>('/src/app/api/datas.ts').subscribe((data) => {
-      this.contents = data;
-    });
+    this.dataService
+      .getContentsData$()
+      .subscribe((data) => (this.contents = data));
   }
 }

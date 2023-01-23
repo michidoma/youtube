@@ -15,7 +15,7 @@ export class SubscriptionsComponent {
   constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit() {
     this.activatedRoute.data.subscribe((resolversData) => {
-      this.filteredData = this.activatedRoute.snapshot.data['subFilteredData'];
+      this.filteredData = resolversData['subFilteredData'];
     });
   }
 }

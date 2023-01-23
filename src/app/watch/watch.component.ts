@@ -10,7 +10,6 @@ import { card } from '../shared/card.model';
 })
 export class WatchComponent implements OnInit {
   content: card | any;
-  id: number = 0;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -18,8 +17,8 @@ export class WatchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe((resolversData) => {
-      this.content = this.activatedRoute.snapshot.data['watchData'];
+    this.activatedRoute.data.subscribe((resolverData) => {
+      this.content = resolverData['watchData'];
       this.titleService.setTitle(this.content.title);
     });
   }

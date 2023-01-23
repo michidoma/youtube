@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { card } from '../../shared/card.model';
-import { HttpClient } from '@angular/common/http';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-side-recommend',
@@ -11,11 +11,11 @@ export class SideRecommendComponent implements OnInit {
   @Input() content?: card;
   contents?: card[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.http.get<any>('/src/app/api/datas.ts').subscribe((data) => {
-      this.contents = data;
-    });
+    this.dataService
+      .getContentsData$()
+      .subscribe((data) => (this.contents = data));
   }
 }

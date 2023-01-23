@@ -9,21 +9,17 @@ import { card } from '../shared/card.model';
   styles: [],
 })
 export class CategoriesComponent implements OnInit {
-  filtered?: card[];
-  cat?: String;
-
   constructor(
     private activatedRoute: ActivatedRoute,
     private titleService: Title
   ) {}
+
+  filtered?: card[];
+
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((resolversData) => {
-      this.filtered = this.activatedRoute.snapshot.data['catData'];
-    });
-    this.activatedRoute.queryParams.subscribe((params) => {
-      let str: string = params['cat'];
-      str = str[0].toUpperCase() + str.slice(1);
-      this.titleService.setTitle(str);
+      this.filtered = resolversData['catData'][0];
+      this.titleService.setTitle(resolversData['catData'][1]);
     });
   }
 }

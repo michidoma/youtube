@@ -18,12 +18,12 @@
           </div>
         </div>
         <div class="subscribe" *ngIf="sub === false">
-          <button (click)="myClickHandler($event)">
+          <button (click)="myClickHandler()">
             <div><span>Subscribe</span></div>
           </button>
         </div>
         <div class="subscribe" id="logged" *ngIf="sub === true">
-          <button>
+          <button (click)="myClickHandler()">
             <div><span>Subscribed</span></div>
           </button>
         </div>
@@ -59,12 +59,6 @@
             <div><span>Share</span></div>
           </button>
         </div>
-        <!-- <div>
-                    <button id="clip">
-                        <div><i class="fa fa-cut"></i></div>
-                        <div><span>Clip</span></div>
-                    </button>
-                </div> -->
         <div>
           <button id="dots">
             <div>

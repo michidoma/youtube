@@ -5,14 +5,15 @@ import { card } from 'src/app/shared/card.model';
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
-  styles: [],
 })
 export class ResultsComponent {
   resultArray?: card[];
+
   constructor(private activatedRoute: ActivatedRoute) {}
+
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((resolversData) => {
-      this.resultArray = this.activatedRoute.snapshot.data['resultsData'];
+      this.resultArray = resolversData['resultsData'];
     });
   }
 }
