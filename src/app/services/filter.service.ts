@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { card } from '../shared/card.model';
@@ -8,7 +7,7 @@ import { DataService } from './data.service';
   providedIn: 'root',
 })
 export class FilterService {
-  constructor(private http: HttpClient, private dataService: DataService) {}
+  constructor(private dataService: DataService) {}
 
   private filterKey: string = 'all';
 

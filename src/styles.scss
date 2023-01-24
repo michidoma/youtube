@@ -1083,7 +1083,7 @@ body {
     .container {
         padding: 48px 40px 36px 40px;
         width: 370px;
-        margin: 30px 0px;
+        margin: 20px 0px;
         border: 1px solid #dadce0;
         border-radius: 10px;
         > div:first-child {
@@ -1102,7 +1102,7 @@ body {
                 font-size: 16px;
             }
         }
-        > div:last-child {
+        > form {
             padding-top: 24px;
             > div:first-child, >div:nth-child(2) {
                 display: flex;
@@ -1115,6 +1115,12 @@ body {
                     color: #202124;
                     font-size: 16px;
                     height: 28px;
+                }
+                .validMessage {
+                    margin-top: 6px;
+                    padding-left: 3px;
+                    font-size: 12px;
+                    color: #dd3025;
                 }
                 button {
                     font-size: 14px;
@@ -1147,7 +1153,7 @@ body {
                     background-color: #f6f9fe;
                     color: #174ea6;
                 }
-                button {
+                input {
                     padding: 0px 15px;
                     font-size: 14px;
                     color: white;
@@ -1156,13 +1162,17 @@ body {
                     background-color: #1a73e8;
                     cursor: pointer;
                 }
-                button:hover {
+                input:hover {
                     background-color: #1b66c9;
                     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
                 }
-            } 
-        }
+            }
+        } 
     }
+}
+
+input.ng-invalid.ng-touched {
+    border: 1.5px solid #dd3025 !important;
 }
 
 section > .shorts {

@@ -17,7 +17,7 @@ export const contents: card[] = [
     date: new Date(2023, 0, 12),
     duration: '0:56',
     description:
-      "About Netflix: Netflix is the world's leading streaming entertainment service with 223 million paid memberships in over 190 countries enjoying TV series, documentaries, feature films and mobile games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
+      "More Wednesday Addams is on the way. Season 2 is coming, and Season 1 is now streaming, only on Netflix. \n \n SUBSCRIBE: http://bit.ly/29qBUt7 \n \n About Netflix: \n Netflix is the world's leading streaming entertainment service with 223 million paid memberships in over 190 countries enjoying TV series, documentaries, feature films and mobile games across a wide variety of genres and languages. Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time. \n \n Wednesday Addams | Season 2 Announcement | Netflix \n https://www.youtube.com/@Netflix \n \n Smart, sarcastic and a little dead inside, Wednesday Addams investigates a murder spree while making new friends — and foes — at Nevermore Academy.",
     keywords: ['wednesday', 'addams', 'movie', 'serial'],
     categories: ['trending'],
   },
@@ -37,7 +37,7 @@ export const contents: card[] = [
     date: new Date(2022, 11, 8),
     duration: '7:43',
     description:
-      "DISCLAIMER: All opinions shared on this channel are our own and don't express views or opinions of our employers. We only use our experiences and public knowledge to make our content. NO CONFIDENTIAL INFORMATION of our employers is used or shared on this channel. This is not a Professional Coaching channel, it only highlights the public resources that have worked for our careers.",
+      '1. How to use Leetcode effectively? \n 2. How to learn Data Structures and Algorithms? \n 3. How to use Leetcode solutions? \n 4. Whether to use Python for Leetcode? \n 5. How to crack coding interview? \n \n I will answer all these questions in this video.',
     keywords: ['coding', 'problems'],
     categories: ['learning'],
   },
@@ -177,7 +177,7 @@ export const contents: card[] = [
     date: new Date(2021, 7, 10),
     duration: '28:00',
     description:
-      "A fleshed out and straightforward step-by-step guide on how to get every death in The Sims 4 in 2021! I will teach you the easiest ways to achieve every death type in The Sims 4, up to Cottage Living Expansion Pack. If you enjoy torturing your sims as much as I do, this is the video for you! 😂 \n \n If you think that I missed something important, please tell me in the comments, and if you have any questions, please leave them down below as well, and I'll try to help you to the best of my ability. I hope you enjoyed the video! Thank you so much for watching! :)",
+      "A fleshed out and straightforward step-by-step guide on how to get every death in The Sims 4 in 2021! I will teach you the easiest ways to achieve every death type in The Sims 4, up to Cottage Living Expansion Pack. If you enjoy torturing your sims as much as I do, this is the video for you! 😂 \n If you think that I missed something important, please tell me in the comments, and if you have any questions, please leave them down below as well, and I'll try to help you to the best of my ability. I hope you enjoyed the video! Thank you so much for watching! :)",
     keywords: ['sims', 'deaths', 'gaming', 'animation'],
     categories: ['gaming'],
   },

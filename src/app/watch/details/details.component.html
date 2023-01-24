@@ -70,13 +70,22 @@
     </div>
     <div class="bottom-row">
       <div class="description">
-        <div>
-          <b
-            ><span>{{ content?.views | numberFormat }} views&ensp;</span
-            ><span>{{ content?.date | datePipe }} ago</span></b
-          >
+        <div *ngIf="showMore === false">
+          <b>
+            <span>{{ content?.views | numberFormat }} views&ensp;</span>
+            <span>{{ content?.date | datePipe }} ago</span>
+          </b>
         </div>
-        <div [ngClass]="{ 'line-clamp': !showMore }">
+        <div *ngIf="showMore === true">
+          <b>
+            <span>{{ content?.views | number }} views&ensp;</span>
+            <span>{{ content?.date | date : "mediumDate" }}</span>
+          </b>
+        </div>
+        <div
+          [ngClass]="{ 'line-clamp': !showMore }"
+          style="white-space: pre-wrap"
+        >
           {{ content?.description }}
           <p (click)="showMore = false"><b>Show less</b></p>
         </div>

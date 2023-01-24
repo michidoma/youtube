@@ -7,24 +7,65 @@
       <h1>Sign in</h1>
       <p>to continue to YouTube</p>
     </div>
-    <div>
+    <form #loginForm="ngForm">
       <div>
-        <input type="text" placeholder="Email or phone" #username />
-        <button><strong>Forgot email?</strong></button>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email or phone"
+          [(ngModel)]="userInfo.email"
+          #emailAddress="ngModel"
+          required
+          email
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
+        <div class="validMessage">
+          <div
+            *ngIf="emailAddress.errors?.['required'] && emailAddress.touched"
+          >
+            Please enter an email address.
+          </div>
+          <div *ngIf="emailAddress.errors?.['pattern'] && emailAddress.touched">
+            Please enter a valid email address.
+          </div>
+        </div>
+        <button>
+          <strong>Forgot email?</strong>
+        </button>
       </div>
       <div>
-        <input type="password" placeholder="Enter your password" />
-        <button><strong>Forgot password?</strong></button>
+        <input
+          [type]="passwordType"
+          name="password"
+          placeholder="Enter your password"
+          [(ngModel)]="userInfo.password"
+          #password="ngModel"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+        />
+        <button (click)="passwordToggle()">eye</button>
+        <div class="validMessage">
+          <div *ngIf="password.errors?.['required'] && password.touched">
+            Password is required.
+          </div>
+          <div *ngIf="password.errors?.['pattern'] && password.touched">
+            Password must contain more than 8 characters, 1 uppercase letter,
+            and 1 number.
+          </div>
+        </div>
+        <button>
+          <strong>Forgot password?</strong>
+        </button>
       </div>
       <div>
         <span><strong>Create account</strong></span>
-        <button
-          (click)="setLog('1'); setUsername(username.value)"
-          [routerLink]="['/home']"
-        >
-          Sign in
-        </button>
+        <input
+          type="submit"
+          value="Sign in"
+          (click)="setLocalStorage(); navigateToHome()"
+          [disabled]="!loginForm.valid"
+        />
       </div>
-    </div>
+    </form>
   </div>
 </div>
