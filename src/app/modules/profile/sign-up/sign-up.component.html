@@ -1,0 +1,83 @@
+<div class="sign-up">
+  <div class="container">
+    <div>
+      <div>
+        <img
+          src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
+        />
+        <p>Create your Google Account</p>
+      </div>
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="fullname" formGroupName="fullName">
+          <div>
+            <input
+              type="text"
+              placeholder="First name"
+              formControlName="firstName"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Last name"
+              formControlName="lastName"
+            />
+          </div>
+        </div>
+        <div class="username">
+          <div>
+            <input
+              type="text"
+              placeholder="Username"
+              formControlName="username"
+            /><span>@gmail.com</span>
+          </div>
+          <div class="small-desc">You can use letters, numbers & periods</div>
+        </div>
+        <div>
+          <button class="option-btn">
+            <b>Use my current email address instead</b>
+          </button>
+        </div>
+        <div class="password" formGroupName="password">
+          <div>
+            <div>
+              <input
+                type="text"
+                placeholder="Password"
+                formControlName="pass"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Confirm"
+                formControlName="confirmPass"
+              />
+            </div>
+          </div>
+          <div class="small-desc">
+            Use 8 or more characters with a mix of letters, numbers & symbols
+          </div>
+          <div>
+            <input type="checkbox" />
+            <span>Show password</span>
+          </div>
+        </div>
+      </form>
+      <div>
+        <div>
+          <button class="option-btn"><b>Sign in instead</b></button>
+        </div>
+        <div>
+          <button class="next" type="submit" [disabled]="!profileForm.valid">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" />
+    </div>
+  </div>
+</div>

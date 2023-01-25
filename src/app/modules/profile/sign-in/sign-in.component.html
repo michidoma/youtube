@@ -33,7 +33,7 @@
           <strong>Forgot email?</strong>
         </button>
       </div>
-      <div>
+      <div class="password">
         <input
           [type]="passwordType"
           name="password"
@@ -43,7 +43,9 @@
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           required
         />
-        <button (click)="passwordToggle()">eye</button>
+        <button class="eye">
+          <i class="fa" [ngClass]="eye" (click)="passwordToggle()"></i>
+        </button>
         <div class="validMessage">
           <div *ngIf="password.errors?.['required'] && password.touched">
             Password is required.
@@ -58,7 +60,11 @@
         </button>
       </div>
       <div>
-        <span><strong>Create account</strong></span>
+        <span
+          [routerLink]="['/profile/signup']"
+          routerLinkActive="router-link-active"
+          ><strong>Create account</strong></span
+        >
         <input
           type="submit"
           value="Sign in"

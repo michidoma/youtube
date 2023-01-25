@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AccountComponent } from './account/account.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'account', pathMatch: 'full' },
+  { path: '', redirectTo: 'signin', pathMatch: 'full' },
   {
-    path: 'account',
-    component: AccountComponent,
+    path: 'signin',
+    component: SignInComponent,
+  },
+  {
+    path: 'signup',
+    component: SignUpComponent,
   },
 ];
 
 @NgModule({
-  declarations: [AccountComponent],
-  imports: [CommonModule, FormsModule, RouterModule.forChild(routes)],
+  declarations: [SignInComponent, SignUpComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
+  ],
 })
 export class ProfileModule {}

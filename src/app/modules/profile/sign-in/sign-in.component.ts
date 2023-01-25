@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 import { userInfo } from 'src/app/shared/user-info.model';
 
 @Component({
-  selector: 'app-account',
-  templateUrl: './account.component.html',
-  styles: [],
+  selector: 'app-sign-in',
+  templateUrl: './sign-in.component.html',
 })
-export class AccountComponent {
+export class SignInComponent {
   @ViewChild('loginForm') loginForm: NgForm | any;
 
   userInfo: userInfo = {
@@ -16,14 +15,17 @@ export class AccountComponent {
     password: '',
   };
   passwordType: string = 'password';
+  eye: string = 'fa-eye-slash';
 
   constructor(private router: Router) {}
 
   passwordToggle() {
     if (this.passwordType === 'password') {
       this.passwordType = 'text';
+      this.eye = 'fa-eye';
     } else {
       this.passwordType = 'password';
+      this.eye = 'fa-eye-slash';
     }
   }
 
@@ -35,8 +37,4 @@ export class AccountComponent {
   navigateToHome() {
     this.router.navigate(['/home']);
   }
-
-  // OnSubmit() {
-  //   console.log('Submitted :>> ', this.loginForm);
-  // }
 }
