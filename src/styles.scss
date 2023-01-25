@@ -1189,6 +1189,12 @@ input.ng-invalid.ng-touched {
     border: 1.5px solid #dd3025 !important;
 }
 
+form.ng-submitted.ng-invalid {
+    input.ng-invalid {
+        border: 1.5px solid #dd3025 !important;
+    }
+}
+
 .sign-up {
     display: flex;
     justify-content: center;
@@ -1223,12 +1229,14 @@ input.ng-invalid.ng-touched {
                     border-color: #1a73e8;
                 }
                 .fullname {
-                    display: flex;
-                    > div:first-child input {
-                        margin-right: 8px;
-                    }
-                    div {
-                        padding-top: 8px;
+                    > div:first-child {
+                        display: flex;
+                        > div:first-child input {
+                            margin-right: 8px;
+                        }
+                        div {
+                            padding-top: 8px;
+                        }
                     }
                 }
                 .username {
@@ -1249,6 +1257,12 @@ input.ng-invalid.ng-touched {
                     padding-top: 4px;
                     margin-left: 10px;
                     color: #5f6368;
+                }
+                .invalid {
+                    font-size: 12px;
+                    padding-top: 4px;
+                    margin-left: 10px;
+                    color: #dd3025;              
                 }
                 > div:nth-child(3){
                     margin: 15px 0px 10px 0px;
@@ -1271,22 +1285,22 @@ input.ng-invalid.ng-touched {
                         }
                     }
                 }
-            }
-            > div:last-child {
-                display: flex;
-                margin-top: 20px;
-                justify-content: space-between;
-                align-items: center;
-                .next {
-                    padding: 8px 24px;
-                    color: white;
-                    background-color: #1a73e8;
-                    border-radius: 6px;
-                    border: none;
-                    cursor: pointer;
-                }
-                .next:hover {
-                    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+                > div:last-child {
+                    display: flex;
+                    margin-top: 20px;
+                    justify-content: space-between;
+                    align-items: center;
+                    .next {
+                        padding: 8px 24px;
+                        color: white;
+                        background-color: #1a73e8;
+                        border-radius: 6px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .next:hover {
+                        box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+                    }
                 }
             }
             .option-btn {

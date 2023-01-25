@@ -10,18 +10,50 @@
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
         <div class="fullname" formGroupName="fullName">
           <div>
-            <input
-              type="text"
-              placeholder="First name"
-              formControlName="firstName"
-            />
+            <div>
+              <input
+                type="text"
+                placeholder="First name"
+                formControlName="firstName"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Last name"
+                formControlName="lastName"
+              />
+            </div>
           </div>
           <div>
-            <input
-              type="text"
-              placeholder="Last name"
-              formControlName="lastName"
-            />
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.fullName.touched &&
+                profileForm.controls.fullName.controls.firstName.invalid &&
+                profileForm.controls.fullName.controls.lastName.invalid
+              "
+            >
+              Enter first and last names
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.fullName.controls.firstName.invalid &&
+                profileForm.controls.fullName.controls.lastName.valid
+              "
+            >
+              Enter first name
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.fullName.controls.firstName.valid &&
+                profileForm.controls.fullName.controls.lastName.invalid
+              "
+            >
+              Enter last name
+            </div>
           </div>
         </div>
         <div class="username">
@@ -32,7 +64,27 @@
               formControlName="username"
             /><span>@gmail.com</span>
           </div>
-          <div class="small-desc">You can use letters, numbers & periods</div>
+          <div>
+            <div
+              class="small-desc"
+              *ngIf="
+                profileForm.controls.username.untouched ||
+                (profileForm.controls.username.touched &&
+                  profileForm.controls.username.valid)
+              "
+            >
+              You can use letters, numbers & periods
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.username.invalid &&
+                profileForm.controls.username.touched
+              "
+            >
+              Sorry, your username must be between 6 and 30 characters long.
+            </div>
+          </div>
         </div>
         <div>
           <button class="option-btn">
@@ -56,25 +108,53 @@
               />
             </div>
           </div>
-          <div class="small-desc">
-            Use 8 or more characters with a mix of letters, numbers & symbols
+          <div>
+            <div class="small-desc">
+              Use 8 or more characters with a mix of letters, numbers & symbols
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.fullName.touched &&
+                profileForm.controls.fullName.controls.firstName.invalid &&
+                profileForm.controls.fullName.controls.lastName.invalid
+              "
+            >
+              Enter first and last names
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.fullName.controls.firstName.invalid &&
+                profileForm.controls.fullName.controls.lastName.valid
+              "
+            >
+              Enter first name
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.controls.fullName.controls.firstName.valid &&
+                profileForm.controls.fullName.controls.lastName.invalid
+              "
+            >
+              Enter last name
+            </div>
           </div>
           <div>
             <input type="checkbox" />
             <span>Show password</span>
           </div>
         </div>
+        <div>
+          <div>
+            <button class="option-btn"><b>Sign in instead</b></button>
+          </div>
+          <div>
+            <button class="next" type="submit">Next</button>
+          </div>
+        </div>
       </form>
-      <div>
-        <div>
-          <button class="option-btn"><b>Sign in instead</b></button>
-        </div>
-        <div>
-          <button class="next" type="submit" [disabled]="!profileForm.valid">
-            Next
-          </button>
-        </div>
-      </div>
     </div>
     <div>
       <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" />

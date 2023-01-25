@@ -27,6 +27,14 @@ export class SignInComponent {
       this.passwordType = 'password';
       this.eye = 'fa-eye-slash';
     }
+    console.log('loginForm :>> ', this.loginForm.status);
+  }
+
+  onSubmit() {
+    if (this.loginForm.status === 'VALID') {
+      this.setLocalStorage();
+      this.navigateToHome();
+    }
   }
 
   setLocalStorage(): void {
