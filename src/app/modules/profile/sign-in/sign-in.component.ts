@@ -14,21 +14,9 @@ export class SignInComponent {
     email: '',
     password: '',
   };
-  passwordType: string = 'password';
-  eye: string = 'fa-eye-slash';
+  show: boolean = false;
 
   constructor(private router: Router) {}
-
-  passwordToggle() {
-    if (this.passwordType === 'password') {
-      this.passwordType = 'text';
-      this.eye = 'fa-eye';
-    } else {
-      this.passwordType = 'password';
-      this.eye = 'fa-eye-slash';
-    }
-    console.log('loginForm :>> ', this.loginForm.status);
-  }
 
   onSubmit() {
     if (this.loginForm.status === 'VALID') {

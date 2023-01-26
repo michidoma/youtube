@@ -13,7 +13,7 @@ const routes: Routes = [
     component: SignInComponent,
   },
   {
-    title: 'Create your account',
+    title: 'Create your Google Account',
     path: 'signup',
     component: SignUpComponent,
   },

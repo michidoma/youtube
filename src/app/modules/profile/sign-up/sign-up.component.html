@@ -29,9 +29,9 @@
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.fullName.touched &&
-                profileForm.controls.fullName.controls.firstName.invalid &&
-                profileForm.controls.fullName.controls.lastName.invalid
+                profileForm.get('fullName')?.touched &&
+                profileForm.get('fullName.firstName')?.hasError('required') &&
+                profileForm.get('fullName.lastName')?.hasError('required')
               "
             >
               Enter first and last names
@@ -39,8 +39,8 @@
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.fullName.controls.firstName.invalid &&
-                profileForm.controls.fullName.controls.lastName.valid
+                profileForm.get('fullName.firstName')?.hasError('required') &&
+                profileForm.get('fullName.lastName')?.valid
               "
             >
               Enter first name
@@ -48,11 +48,20 @@
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.fullName.controls.firstName.valid &&
-                profileForm.controls.fullName.controls.lastName.invalid
+                profileForm.get('fullName.firstName')?.valid &&
+                profileForm.get('fullName.lastName')?.hasError('required')
               "
             >
               Enter last name
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.get('fullName.firstName')?.hasError('noSpace') ||
+                profileForm.get('fullName.lastName')?.hasError('noSpace')
+              "
+            >
+              Name cannot contain a space
             </div>
           </div>
         </div>
@@ -68,9 +77,9 @@
             <div
               class="small-desc"
               *ngIf="
-                profileForm.controls.username.untouched ||
-                (profileForm.controls.username.touched &&
-                  profileForm.controls.username.valid)
+                profileForm.get('username')?.untouched ||
+                (profileForm.get('username')?.touched &&
+                  profileForm.get('username')?.valid)
               "
             >
               You can use letters, numbers & periods
@@ -78,8 +87,8 @@
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.username.invalid &&
-                profileForm.controls.username.touched
+                profileForm.get('username')?.invalid &&
+                profileForm.get('username')?.touched
               "
             >
               Sorry, your username must be between 6 and 30 characters long.
@@ -95,54 +104,67 @@
           <div>
             <div>
               <input
-                type="text"
+                [type]="checkbox === true ? 'text' : 'password'"
                 placeholder="Password"
                 formControlName="pass"
               />
             </div>
             <div>
               <input
-                type="text"
+                [type]="checkbox === true ? 'text' : 'password'"
                 placeholder="Confirm"
                 formControlName="confirmPass"
               />
             </div>
           </div>
           <div>
-            <div class="small-desc">
+            <div
+              class="small-desc"
+              *ngIf="
+                profileForm.get('password')?.pristine &&
+                profileForm.get('password')?.untouched
+              "
+            >
               Use 8 or more characters with a mix of letters, numbers & symbols
             </div>
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.fullName.touched &&
-                profileForm.controls.fullName.controls.firstName.invalid &&
-                profileForm.controls.fullName.controls.lastName.invalid
+                profileForm.get('password')?.touched &&
+                profileForm.get('password.pass')?.errors?.['required']
               "
             >
-              Enter first and last names
+              Enter a password
             </div>
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.fullName.controls.firstName.invalid &&
-                profileForm.controls.fullName.controls.lastName.valid
+                profileForm.get('password.pass')?.errors?.['minlength']
               "
             >
-              Enter first name
+              Use 8 characters or more for your password
             </div>
             <div
               class="invalid"
               *ngIf="
-                profileForm.controls.fullName.controls.firstName.valid &&
-                profileForm.controls.fullName.controls.lastName.invalid
+                profileForm.get('password.pass')?.errors?.['pattern'] && !profileForm.get('password.pass')?.errors?.['minlength']
               "
             >
-              Enter last name
+              Please choose a stronger password. Try a mix of uppercase,
+              lowercase letters and numbers.
+            </div>
+            <div
+              class="invalid"
+              *ngIf="
+                profileForm.get('password.pass')?.valid &&
+                profileForm.get('password.confirmPass')?.invalid
+              "
+            >
+              Those passwords didn't match. Try again.
             </div>
           </div>
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" (click)="checkbox = !checkbox" />
             <span>Show password</span>
           </div>
         </div>

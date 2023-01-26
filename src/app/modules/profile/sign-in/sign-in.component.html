@@ -35,7 +35,7 @@
       </div>
       <div class="password">
         <input
-          [type]="passwordType"
+          [type]="show ? 'text' : 'password'"
           name="password"
           placeholder="Enter your password"
           [(ngModel)]="userInfo.password"
@@ -44,7 +44,11 @@
           required
         />
         <button class="eye">
-          <i class="fa" [ngClass]="eye" (click)="passwordToggle()"></i>
+          <i
+            class="fa"
+            [ngClass]="show ? 'fa-eye' : 'fa-eye-slash'"
+            (click)="show = !show"
+          ></i>
         </button>
         <div class="validMessage">
           <div *ngIf="password.errors?.['required'] && password.touched">
