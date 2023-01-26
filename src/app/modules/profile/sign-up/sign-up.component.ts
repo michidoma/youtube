@@ -48,5 +48,6 @@ export class SignUpComponent {
     if (this.profileForm.valid) {
       this.router.navigate(['/profile/signin']);
     }
+    console.log('this.profileForm :>> ', this.profileForm);
   }
 }

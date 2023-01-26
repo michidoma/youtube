@@ -13,7 +13,7 @@
           type="email"
           name="email"
           placeholder="Email or phone"
-          [(ngModel)]="userInfo.email"
+          [(ngModel)]="enteredEmail"
           #emailAddress="ngModel"
           required
           email
@@ -28,6 +28,9 @@
           <div *ngIf="emailAddress.errors?.['pattern'] && emailAddress.touched">
             Please enter a valid email address.
           </div>
+          <div *ngIf="emailAddress.valid && !emailMatch">
+            Couldn't find your Google Account
+          </div>
         </div>
         <button>
           <strong>Forgot email?</strong>
@@ -35,10 +38,10 @@
       </div>
       <div class="password">
         <input
-          [type]="show ? 'text' : 'password'"
+          [type]="showPassword ? 'text' : 'password'"
           name="password"
           placeholder="Enter your password"
-          [(ngModel)]="userInfo.password"
+          [(ngModel)]="enteredPassword"
           #password="ngModel"
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           required
@@ -46,8 +49,8 @@
         <button class="eye">
           <i
             class="fa"
-            [ngClass]="show ? 'fa-eye' : 'fa-eye-slash'"
-            (click)="show = !show"
+            [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+            (click)="showPassword = !showPassword"
           ></i>
         </button>
         <div class="validMessage">
@@ -57,6 +60,9 @@
           <div *ngIf="password.errors?.['pattern'] && password.touched">
             Password must contain more than 8 characters, 1 uppercase letter,
             and 1 number.
+          </div>
+          <div *ngIf="emailMatch && !passwordMatch">
+            Wrong password. Try again or click Forgot password to reset it.
           </div>
         </div>
         <button>

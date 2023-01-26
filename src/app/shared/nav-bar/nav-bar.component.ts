@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 export class NavBarComponent {
   signedIn?: string;
   pop: boolean = false;
-  username: string = '';
+  // username: string = '';
+  fullName: string = '';
+  email: string = '';
   srcLogo: string = '/assets/img/logo.png';
   theme: string = 'Light';
 
@@ -16,7 +18,8 @@ export class NavBarComponent {
 
   ngOnInit(): void {
     this.signedIn = localStorage.getItem('loggedIn') || '-1';
-    this.username = localStorage.getItem('username') || 'username';
+    this.fullName = localStorage.getItem('fullName') || 'username';
+    this.email = localStorage.getItem('email') || '@email';
     if (localStorage.getItem('darkMode') === '1') {
       this.srcLogo = '/assets/img/logo-dark-mode.png';
       document.body.classList.add('dark-theme');

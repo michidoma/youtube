@@ -42,17 +42,17 @@
       ></path>
     </svg>
     <button (click)="pop = !pop" class="user-profile">
-      {{ username.charAt(0) }}
+      {{ fullName.charAt(0) }}
     </button>
   </div>
   <div *ngIf="pop === true" class="pop-up">
     <div>
       <div>
-        <button>{{ username.charAt(0) }}</button>
+        <button>{{ fullName.charAt(0) }}</button>
       </div>
       <div>
-        <p>{{ username }}</p>
-        <p>@{{ username | lowercase }}</p>
+        <p>{{ fullName }}</p>
+        <p>{{ email | lowercase }}</p>
         <p class="manage-account">Manage your Google Account</p>
       </div>
     </div>
