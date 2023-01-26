@@ -47,7 +47,7 @@ export class SignUpComponent {
   onSubmit() {
     if (this.profileForm.valid) {
       this.router.navigate(['/profile/signin']);
+      localStorage.setItem('user', JSON.stringify(this.profileForm.value));
     }
-    console.log('this.profileForm :>> ', this.profileForm);
   }
 }

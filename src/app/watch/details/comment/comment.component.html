@@ -7,10 +7,15 @@
       </button>
     </div>
     <div class="add-comment">
-      <img
-        src="https://img.icons8.com/material/48/228BE6/user-male-circle--v1.png"
-      />
-      <input type="text" value="Add a comment..." />
+      <div *ngIf="signedIn === '0'">
+        <img
+          src="https://img.icons8.com/material/48/228BE6/user-male-circle--v1.png"
+        />
+      </div>
+      <div *ngIf="signedIn === '1'">
+        <button class="user-profile">{{ fullName?.charAt(0) }}</button>
+      </div>
+      <input type="text" placeholder="Add a comment..." />
     </div>
   </div>
   <div class="comments">

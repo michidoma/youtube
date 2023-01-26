@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 export class NavBarComponent {
   signedIn?: string;
   pop: boolean = false;
-  // username: string = '';
   fullName: string = '';
   email: string = '';
   srcLogo: string = '/assets/img/logo.png';
