@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 import { CustomValidators } from 'src/app/shared/custom-validators';
+import { userInfo } from 'src/app/shared/user-info.model';
 
 @Component({
   selector: 'app-sign-up',
@@ -41,13 +43,43 @@ export class SignUpComponent {
   });
 
   checkbox: boolean = false;
+  userModel: userInfo = {
+    firstName: '',
+    lastName: '',
+    username: '',
+    email: '',
+    password: '',
+  };
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private apiService: ApiService
+  ) {}
 
   onSubmit() {
     if (this.profileForm.valid) {
+      this.postUserDetails();
       this.router.navigate(['/profile/signin']);
       localStorage.setItem('user', JSON.stringify(this.profileForm.value));
     }
+  }
+
+  postUserDetails() {
+    this.userModel.firstName = this.profileForm.value.fullName?.firstName!;
+    this.userModel.lastName = this.profileForm.value.fullName?.lastName!;
+    this.userModel.username = this.profileForm.value.username!;
+    this.userModel.email = this.profileForm.value.username + '@gmail.com';
+    this.userModel.password = this.profileForm.value.password.pass;
+
+    this.apiService.addUser(this.userModel).subscribe(
+      (res) => alert('User added successfully'),
+      (err) => alert('Something went wrong')
+    );
+
+    // this.apiService.postUser(this.userModel).subscribe(
+    //   (res) => alert('User added successfully'),
+    //   (err) => alert('Something went wrong')
+    // );
   }
 }

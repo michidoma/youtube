@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ChooseAccountComponent } from './choose-account/choose-account.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
@@ -17,10 +18,15 @@ const routes: Routes = [
     path: 'signup',
     component: SignUpComponent,
   },
+  {
+    title: 'Sign in',
+    path: 'signinchooser',
+    component: ChooseAccountComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [SignInComponent, SignUpComponent],
+  declarations: [SignInComponent, SignUpComponent, ChooseAccountComponent],
   imports: [
     CommonModule,
     FormsModule,

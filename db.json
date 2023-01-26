@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "firstName": "Michidmaa",
+      "lastName": "Purevjav",
+      "username": "michidmaap6",
+      "email": "michidmaap6@gmail.com",
+      "password": "Michidmaa1125",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Munkhuu",
+      "lastName": "ZZ",
+      "username": "munkhuugang",
+      "email": "munkhuugang@gmail.com",
+      "password": "Munkh1234",
+      "id": 1
+    },
+    {
+      "firstName": "Michidmaa",
+      "lastName": "Purevjav",
+      "username": "michidmaap6",
+      "email": "michidmaap6@gmail.com",
+      "password": "Michidmaa1125",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

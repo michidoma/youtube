@@ -1,0 +1,10 @@
+<p>choose-account works!</p>
+<div>
+  <div *ngFor="let user of userDatas">
+    <p>{{ user.firstName }}</p>
+    <p>{{ user.email }}</p>
+    <p>{{ user.password }}</p>
+    <button (click)="deleteUser(user.id)">Delete</button>
+    <hr />
+  </div>
+</div>

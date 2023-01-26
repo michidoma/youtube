@@ -1,4 +1,4 @@
-import { card } from '../shared/card.model';
+import { card } from '../../app/shared/card.model';
 
 export const contents: card[] = [
   {

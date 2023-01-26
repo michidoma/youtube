@@ -1,9 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot,
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';

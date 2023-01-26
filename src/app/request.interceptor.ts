@@ -7,7 +7,7 @@ import {
   HttpResponse,
 } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { contents } from './api/datas';
+import { contents } from '../assets/api/datas';
 
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
