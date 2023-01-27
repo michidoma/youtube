@@ -34,7 +34,7 @@ export const contents: card[] = [
     safeEmbed: '',
     likeCount: 39422,
     views: 1009050,
-    date: new Date(2022, 11, 8),
+    date: new Date(2023, 0, 7),
     duration: '7:43',
     description:
       '1. How to use Leetcode effectively? \n 2. How to learn Data Structures and Algorithms? \n 3. How to use Leetcode solutions? \n 4. Whether to use Python for Leetcode? \n 5. How to crack coding interview? \n \n I will answer all these questions in this video.',
@@ -74,7 +74,7 @@ export const contents: card[] = [
     safeEmbed: '',
     likeCount: 2797,
     views: 55891,
-    date: new Date(2022, 11, 31),
+    date: new Date(2023, 0, 24),
     duration: '3:31',
     description:
       '22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다. 22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다. 22년도 재밌었습니다~<br>▶  insta : eicku_16<br>※ 비하발언, 욕설 댓글 등 보기불편한 댓글은 삭제될 수 있습니다.',
@@ -94,7 +94,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid5.webp',
     likeCount: 35988,
     views: 1542819,
-    date: new Date(2022, 11, 25),
+    date: new Date(2023, 0, 11),
     duration: '10:17',
     description:
       'Today we visit London, England and ask strangers how many languages they speak. Support my channel: 👉 https://www.patreon.com/thenewtravel. Support my channel: https://www.patreon.com/thenewtravel',
@@ -194,7 +194,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid10.webp',
     likeCount: 67390,
     views: 6162108,
-    date: new Date(2020, 2, 16),
+    date: new Date(2023, 0, 27, 5, 25, 5),
     duration: '1:59:59',
     description:
       'Effective Learning Technique \n Introduction: \n The timer is divided into two parts. the first one is 25 minutes long. Here you have to work, after that you will get a 5 minutes break. This technique will help you to study more effective. *📦So that your Amazon package is always delivered quickly and you can also switch off while studying with PrimeVideo🍿 (Amazon Affiliate Link for Students):  https://amzn.to/3D1p43e',
@@ -214,7 +214,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid11.webp',
     likeCount: 209328,
     views: 11784112,
-    date: new Date(2021, 3, 27),
+    date: new Date(2023, 0, 27, 1, 23, 41),
     duration: '1:01:45',
     description:
       'It’s that time of the night again, when everyone is asleep, except for a selected few who are still studying, vibing, and thinking about life. “4 A.M Study Session” is a beautiful collection of soft beats by a multitude of talented artists from around the world. It’s getting late so best to grab a pair of your favourite headphones - and let the relaxing sounds of lofi slowly take over 💤',
@@ -242,7 +242,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid12.webp',
     likeCount: 252,
     views: 40089,
-    date: new Date(2023, 0, 18),
+    date: new Date(2023, 0, 27, 11),
     duration: '2:46',
     description:
       'Ukrainian officials were killed on Wednesday morning in a helicopter crash in Brovary, a town on the outskirts of Kyiv. \n WATCH FULL EPISODES OF GMA: https://abc.go.com/shows/good-morning... \n Training terrorists in your country to attack your opponents is always a bad idea. That destruction looks worse than just a helicopter crash. It looks like a NATO styled terrorist attack.',
@@ -262,7 +262,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid13.webp',
     likeCount: 682,
     views: 10232,
-    date: new Date(2023, 0, 19),
+    date: new Date(2023, 0, 27, 12, 20),
     duration: '0:25',
     description:
       'NBC News Digital is a collection of innovative and powerful news brands that deliver compelling, diverse and engaging news stories. NBC News Digital features NBCNews.com, MSNBC.com, TODAY.com, Nightly News, Meet the Press, Dateline, and the existing apps and digital extensions of these respective properties.  We deliver the best in breaking news, live video coverage, original journalism and segments from your favorite NBC News Shows.',
@@ -302,7 +302,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid15.webp',
     likeCount: 117,
     views: 6309,
-    date: new Date(2023, 0, 17),
+    date: new Date(2023, 0, 25),
     duration: '1:19:33',
     description:
       'Gaming Music \n best music mix,music mix 2023,remixes of popular songs,edm remix of popular songs,edm,music 2022,music mix,music,bass boosted,car music,magic music,magic music mix,new music mix,cover,remix,remix popular song,musik,musica,magic records,gaming music,best music mix 2021,best music mix 2022',
@@ -331,7 +331,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid16.webp',
     likeCount: 49389,
     views: 11103132,
-    date: new Date(2022, 1, 6),
+    date: new Date(2023, 0, 2),
     duration: '8:03',
     description:
       "It's amazing how we are still able to appreciate every great moment in the sport that we are not familiar with. 🔔TURN ON NOTIFICATIONS TO NEVER MISS AN UPLOAD!🔔 \n Title: 100% Creative Sports Moments \n Check out my latest music upload: \n FOLLOW ME :D ❤️",
@@ -352,7 +352,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid17.webp',
     likeCount: 5812,
     views: 428282,
-    date: new Date(2023, 0, 22),
+    date: new Date(2023, 0, 24),
     duration: '4:26',
     description:
       "SUBSCRIBE ► https://bit.ly/SubscribeSkySportsPL \n PREMIER LEAGUE HIGHLIGHTS ► http://bit.ly/SkySportsPLHighlights2223 Paul Merson believes Tottenham's midfield were left to be embarrassed by Arsenal today, with the rest of the Super Sunday panel praising the impressive Gunners. ",
@@ -372,7 +372,7 @@ export const contents: card[] = [
     gif: '../../assets/img/vid18.webp',
     likeCount: 34789,
     views: 1465556,
-    date: new Date(2022, 2, 31),
+    date: new Date(2023, 0, 15),
     duration: '5:26',
     description:
       'Enjoy six sports with family and friends locally and online in Nintendo Switch Sports! Play Soccer, Volleyball, Bowling, Tennis, Badminton, and Chambara using intuitive motion controls with a Joy-Con controller. Face off against sports rivals near and far to earn in-game rewards, or aim for the prestigious Pro League! A seventh sport, Golf, will be added this fall.',
