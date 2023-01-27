@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
+import { DataService } from 'src/app/services/data.service';
 import { CustomValidators } from 'src/app/shared/custom-validators';
 import { userInfo } from 'src/app/shared/user-info.model';
 
@@ -54,7 +55,8 @@ export class SignUpComponent {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private dataService: DataService
   ) {}
 
   onSubmit() {
@@ -62,6 +64,7 @@ export class SignUpComponent {
       this.postUserDetails();
       this.router.navigate(['/profile/signin']);
       localStorage.setItem('user', JSON.stringify(this.profileForm.value));
+      this.dataService.setPlaceholder('');
     }
   }
 

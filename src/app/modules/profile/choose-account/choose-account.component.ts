@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { DataService } from 'src/app/services/data.service';
 import { userInfo } from 'src/app/shared/user-info.model';
 
 @Component({
@@ -9,7 +10,10 @@ import { userInfo } from 'src/app/shared/user-info.model';
 export class ChooseAccountComponent implements OnInit {
   userDatas: any;
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private apiService: ApiService,
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {
     this.getAllUserData();
@@ -22,5 +26,9 @@ export class ChooseAccountComponent implements OnInit {
   deleteUser(id: number) {
     this.apiService.deleteUser(id).subscribe((res) => alert('User removed'));
     this.getAllUserData();
+  }
+
+  onChoose(email: string) {
+    this.dataService.setPlaceholder(email);
   }
 }

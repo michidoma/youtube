@@ -1,12 +1,8 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR,
-} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
+import { DataService } from 'src/app/services/data.service';
 import { UserInfoService } from 'src/app/services/user-info.service';
 import { userInfo } from 'src/app/shared/user-info.model';
 
@@ -26,12 +22,13 @@ export class SignInComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserInfoService,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private dataService: DataService
   ) {}
 
   ngOnInit() {
     this.newUser = JSON.parse(localStorage.getItem('user')!);
+    this.enteredEmail = this.dataService.getChosenEmail()!;
   }
 
   onSubmit() {
@@ -43,20 +40,20 @@ export class SignInComponent implements OnInit {
     if (this.loginForm.status === 'VALID') {
       this.apiService.getUsers().subscribe(
         (res) => {
-          const hariu = res.find(
+          const found = res.find(
             (user: any) => user.email === this.enteredEmail
           );
-          // console.log('hariu :>> ', hariu);
-          if (hariu === undefined) {
+          // console.log('found :>> ', found);
+          if (found === undefined) {
             this.emailMatch = false;
             // console.log('email oldsongui :>> ');
           } else {
             this.emailMatch = true;
-            // console.log('email oldson :>> ', hariu);
-            if (hariu.password === this.enteredPassword) {
+            // console.log('email oldson :>> ', found);
+            if (found.password === this.enteredPassword) {
               this.passwordMatch = true;
               console.log('Password zuv :>> ');
-              this.setLocalStorage_(hariu);
+              this.setLocalStorage_(found);
               this.navigateToHome();
             } else {
               this.passwordMatch = false;

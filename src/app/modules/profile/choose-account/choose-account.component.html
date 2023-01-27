@@ -1,10 +1,45 @@
-<p>choose-account works!</p>
-<div>
-  <div *ngFor="let user of userDatas">
-    <p>{{ user.firstName }}</p>
-    <p>{{ user.email }}</p>
-    <p>{{ user.password }}</p>
-    <button (click)="deleteUser(user.id)">Delete</button>
-    <hr />
+<div class="choose-account">
+  <div class="container">
+    <div>
+      <img
+        src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
+      />
+      <h1>Choose an account</h1>
+    </div>
+    <div>
+      <div *ngFor="let user of userDatas">
+        <div>
+          <button>{{ user.firstName.charAt(0).toUpperCase() }}</button>
+        </div>
+        <div
+          class="short-info"
+          (click)="onChoose(user.email)"
+          [routerLink]="['/profile/signin']"
+        >
+          <div>
+            <strong>{{ user.firstName }} {{ user.lastName }}</strong>
+          </div>
+          <div>{{ user.email }}</div>
+        </div>
+        <div class="remove-btn">
+          <svg (click)="deleteUser(user.id)" viewBox="0 0 24 24">
+            <path
+              d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div [routerLink]="['/profile/signup']">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10c5.52,0,10-4.48,10-10C22,6.48,17.52,2,12,2z M7.07,18.28 c0.43-0.9,3.05-1.78,4.93-1.78s4.51,0.88,4.93,1.78C15.57,19.36,13.86,20,12,20S8.43,19.36,7.07,18.28z M18.36,16.83 c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93,0.59-6.36,2.33C4.62,15.49,4,13.82,4,12c0-4.41,3.59-8,8-8c4.41,0,8,3.59,8,8 C20,13.82,19.38,15.49,18.36,16.83z"
+          ></path>
+          <path
+            d="M12,6c-1.94,0-3.5,1.56-3.5,3.5S10.06,13,12,13c1.94,0,3.5-1.56,3.5-3.5S13.94,6,12,6z M12,11c-0.83,0-1.5-0.67-1.5-1.5 C10.5,8.67,11.17,8,12,8c0.83,0,1.5,0.67,1.5,1.5C13.5,10.33,12.83,11,12,11z"
+          ></path>
+        </svg>
+        <div>Use another account</div>
+      </div>
+    </div>
   </div>
 </div>

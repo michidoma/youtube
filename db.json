@@ -11,20 +11,36 @@
   ],
   "users": [
     {
-      "firstName": "Munkhuu",
-      "lastName": "ZZ",
-      "username": "munkhuugang",
-      "email": "munkhuugang@gmail.com",
-      "password": "Munkh1234",
-      "id": 1
-    },
-    {
       "firstName": "Michidmaa",
       "lastName": "Purevjav",
       "username": "michidmaap6",
       "email": "michidmaap6@gmail.com",
-      "password": "Michidmaa1125",
+      "password": "Michidmaa1234",
+      "id": 1
+    },
+    {
+      "firstName": "Enkhjin",
+      "lastName": "Oyungerel",
+      "username": "eny612",
+      "email": "eny612@gmail.com",
+      "password": "Enkhjin1234",
       "id": 2
+    },
+    {
+      "firstName": "Sarnai",
+      "lastName": "Borkhuu",
+      "username": "rosie710",
+      "email": "rosie710@gmail.com",
+      "password": "Sarnai1234",
+      "id": 3
+    },
+    {
+      "firstName": "hehe",
+      "lastName": "haha",
+      "username": "hehehaha",
+      "email": "hehehaha@gmail.com",
+      "password": "Hehe1234",
+      "id": 4
     }
   ],
   "profile": {

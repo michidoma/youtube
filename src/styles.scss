@@ -1337,6 +1337,78 @@ form.ng-submitted.ng-invalid {
     }
 }
 
+.choose-account {
+    display: flex;
+    justify-content: center;
+    .container {
+        padding: 48px 40px 36px 40px;
+        width: 370px;
+        margin: 20px 0px;
+        border: 1px solid #dadce0;
+        border-radius: 10px;
+        min-height: calc(100vh - 140px);
+        > div:first-child {
+            text-align: center;
+            img {
+                height: 24px;
+            }
+            h1 {
+                font-size: 24px;
+                margin: 0px;
+                padding-top: 16px;
+            }
+        }
+        > div:last-child {
+            padding-top: 24px;
+            > div {
+                position: relative;
+                padding: 12px 0px;
+                display: flex;
+                border-bottom: 1px solid #dadce0;
+                button {
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 14px;
+                    border: none;
+                    background-color: #33691e;
+                    color: white;
+                    margin-right: 12px;
+                }
+                .short-info {
+                    > div:first-child{
+                        font-size: 14px;
+                    }
+                    > div:last-child {
+                        font-size: 12px;
+                    }
+                }
+                .remove-btn {
+                    position: absolute;
+                    right: 0;
+                    width: 24px;
+                    height: 24px;
+                    fill: #d93025;
+                }
+            }
+            > div:hover {
+                background-color: #e8f0fe;
+                cursor: pointer;
+            }
+            > div:last-child {
+                display: flex;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0px 4px;
+                }
+                div {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}
+
 section > .shorts {
     position: absolute;
     display: flex;

@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
+  private placeholder?: string;
+
   constructor(private http: HttpClient) {}
 
   getContentsData$(): Observable<any> {
@@ -16,5 +18,13 @@ export class DataService {
     return this.http.get<any>(
       'https://epostnet.novelsoft.mn:8083/api/custom/external/types/internship'
     );
+  }
+
+  setPlaceholder(email: string) {
+    this.placeholder = email;
+  }
+
+  getChosenEmail() {
+    return this.placeholder;
   }
 }
