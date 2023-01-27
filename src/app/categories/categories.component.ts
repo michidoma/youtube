@@ -9,12 +9,12 @@ import { card } from '../shared/card.model';
   styles: [],
 })
 export class CategoriesComponent implements OnInit {
+  filtered?: card[];
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private titleService: Title
   ) {}
-
-  filtered?: card[];
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((resolversData) => {

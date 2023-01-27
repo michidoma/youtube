@@ -8,7 +8,9 @@ import { card } from 'src/app/shared/card.model';
 })
 export class SideVideoCardComponent implements OnInit {
   @Input() itemData: card | any;
+
   imgSrc!: string;
+
   ngOnInit() {
     this.imgSrc = this.itemData.thumbnail;
   }

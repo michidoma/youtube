@@ -7,11 +7,10 @@ import { DataService } from './data.service';
   providedIn: 'root',
 })
 export class FilterService {
-  constructor(private dataService: DataService) {}
-
   private filterKey: string = 'all';
-
   public change = new Subject<string>();
+
+  constructor(private dataService: DataService) {}
 
   setFilter(key: string) {
     this.filterKey = key;

@@ -13,13 +13,14 @@ export class SideBarComponent {
     'M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z';
   @Input() library: string =
     'M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z';
+
   closed: boolean = true;
   signedIn?: string;
   srcLogo?: string;
 
-  constructor() {}
   ngOnInit(): void {
     this.signedIn = localStorage.getItem('loggedIn') || '-1';
+
     if (localStorage.getItem('darkMode') === '1') {
       this.srcLogo = '/assets/img/logo-dark-mode.png';
     } else this.srcLogo = '/assets/img/logo.png';

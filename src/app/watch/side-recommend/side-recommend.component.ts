@@ -9,6 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class SideRecommendComponent implements OnInit {
   @Input() content?: card;
+
   contents?: card[];
 
   constructor(private dataService: DataService) {}

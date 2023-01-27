@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-subscriptions',
   templateUrl: './subscriptions.component.html',
-  styles: [],
 })
 export class SubscriptionsComponent {
   subscriptions: string =
@@ -13,6 +12,7 @@ export class SubscriptionsComponent {
   grid: boolean = true;
 
   constructor(private activatedRoute: ActivatedRoute) {}
+
   ngOnInit() {
     this.activatedRoute.data.subscribe((resolversData) => {
       this.filteredData = resolversData['subFilteredData'];

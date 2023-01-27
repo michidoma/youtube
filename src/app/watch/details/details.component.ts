@@ -9,6 +9,7 @@ import { card } from '../../shared/card.model';
 })
 export class DetailsComponent {
   @Input() content?: card;
+
   showMore: boolean = false;
   sub: boolean = false;
   signedIn?: string;

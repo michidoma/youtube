@@ -7,7 +7,9 @@ import { card } from '../card.model';
 })
 export class VideoCardComponent implements OnInit {
   @Input() itemData: card | any;
+
   imgSrc?: string;
+
   ngOnInit() {
     this.imgSrc = this.itemData.thumbnail;
   }

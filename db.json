@@ -1,14 +1,4 @@
 {
-  "posts": [
-    {
-      "firstName": "Michidmaa",
-      "lastName": "Purevjav",
-      "username": "michidmaap6",
-      "email": "michidmaap6@gmail.com",
-      "password": "Michidmaa1125",
-      "id": 2
-    }
-  ],
   "users": [
     {
       "firstName": "Michidmaa",
@@ -33,17 +23,6 @@
       "email": "rosie710@gmail.com",
       "password": "Sarnai1234",
       "id": 3
-    },
-    {
-      "firstName": "hehe",
-      "lastName": "haha",
-      "username": "hehehaha",
-      "email": "hehehaha@gmail.com",
-      "password": "Hehe1234",
-      "id": 4
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

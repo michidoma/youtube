@@ -20,7 +20,6 @@ export class RequestInterceptor implements HttpInterceptor {
     if (request.url === '/src/app/api/datas.ts') {
       return of(new HttpResponse({ body: contents }));
     }
-    // console.log('request.url: ', request.url, '\n body: ', request);
     return next.handle(request);
   }
 }

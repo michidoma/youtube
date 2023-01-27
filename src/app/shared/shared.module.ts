@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { VideoCardComponent } from './video-card/video-card.component';
+
 import { DatePipe } from './date.pipe';
 import { NumberFormatPipe } from './number-format.pipe';
 

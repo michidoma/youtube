@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { DataService } from 'src/app/services/data.service';
-import { userInfo } from 'src/app/shared/user-info.model';
 
 @Component({
   selector: 'app-choose-account',

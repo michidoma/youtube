@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../../shared/shared.module';
+import { RouterModule, Routes } from '@angular/router';
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { LibraryComponent } from './library/library.component';
-import { RouterModule, Routes } from '@angular/router';
 import { ShortsComponent } from './shorts/shorts.component';
-import { SharedModule } from '../../shared/shared.module';
 import { SubscriptionsResolver } from './subscriptions/subscriptions.resolver';
 
 const routes: Routes = [

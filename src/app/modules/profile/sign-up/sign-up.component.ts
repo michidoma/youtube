@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { DataService } from 'src/app/services/data.service';
+import { FormBuilder, Validators } from '@angular/forms';
 import { CustomValidators } from 'src/app/shared/custom-validators';
 import { userInfo } from 'src/app/shared/user-info.model';
 
@@ -11,6 +11,15 @@ import { userInfo } from 'src/app/shared/user-info.model';
   templateUrl: './sign-up.component.html',
 })
 export class SignUpComponent {
+  checkbox: boolean = false;
+  userModel: userInfo = {
+    firstName: '',
+    lastName: '',
+    username: '',
+    email: '',
+    password: '',
+  };
+
   profileForm = this.fb.group({
     fullName: this.fb.group({
       firstName: ['', [Validators.required, CustomValidators.noSpace]],
@@ -43,15 +52,6 @@ export class SignUpComponent {
     ),
   });
 
-  checkbox: boolean = false;
-  userModel: userInfo = {
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    password: '',
-  };
-
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -63,7 +63,6 @@ export class SignUpComponent {
     if (this.profileForm.valid) {
       this.postUserDetails();
       this.router.navigate(['/profile/signin']);
-      localStorage.setItem('user', JSON.stringify(this.profileForm.value));
       this.dataService.setPlaceholder('');
     }
   }
@@ -76,13 +75,8 @@ export class SignUpComponent {
     this.userModel.password = this.profileForm.value.password.pass;
 
     this.apiService.addUser(this.userModel).subscribe(
-      (res) => alert('User added successfully'),
+      (res) => {},
       (err) => alert('Something went wrong')
     );
-
-    // this.apiService.postUser(this.userModel).subscribe(
-    //   (res) => alert('User added successfully'),
-    //   (err) => alert('Something went wrong')
-    // );
   }
 }

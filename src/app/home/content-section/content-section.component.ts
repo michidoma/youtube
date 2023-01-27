@@ -19,6 +19,7 @@ export class ContentSectionComponent implements OnInit, OnDestroy {
     this.dataService
       .getContentsData$()
       .subscribe((data) => (this.contents = data));
+
     this.filterService.change.subscribe(
       (fil) => (this.contents = this.filterService.getFilteredContents())
     );

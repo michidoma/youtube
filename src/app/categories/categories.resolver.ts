@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { forkJoin, Observable, of } from 'rxjs';
@@ -9,9 +8,9 @@ import { card } from '../shared/card.model';
   providedIn: 'root',
 })
 export class CategoriesResolver implements Resolve<any> {
-  constructor(private dataService: DataService) {}
-
   contents: card[] = [];
+
+  constructor(private dataService: DataService) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
     this.dataService.getContentsData$().subscribe((data) => {

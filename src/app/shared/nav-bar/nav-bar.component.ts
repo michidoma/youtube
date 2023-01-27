@@ -19,6 +19,7 @@ export class NavBarComponent {
     this.signedIn = localStorage.getItem('loggedIn') || '-1';
     this.fullName = localStorage.getItem('fullName') || 'username';
     this.email = localStorage.getItem('email') || '@email';
+
     if (localStorage.getItem('darkMode') === '1') {
       this.srcLogo = '/assets/img/logo-dark-mode.png';
       document.body.classList.add('dark-theme');
