@@ -1,27 +1,47 @@
-# YoutubeClone
+# Youtube Clone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+This repository contains the source code for Youtube Clone, which is built using the Angular framework.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+Before you can start the server and JSON server, make sure you have the following software installed:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js and npm
 
-## Build
+### Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository to your local machine:
+   ```shell
+   git clone https://github.com/michidoma/youtube.git
+   
+2. Change into the project directory:
+   ```shell
+   cd youtube
+   
+3. Install project dependencies:
+   ```shell
+   npm install
 
-## Running unit tests
+4. Install JSON server globally:
+   ```shell
+   npm install -g json-server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Starting the Server
 
-## Running end-to-end tests
+To start the Angular development server, run the following command:
+   ```shell
+   ng serve
+   ```
+This will launch the frontend application on a local development server.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Starting the JSON Server
 
-## Further help
+To start the JSON server and serve the database, run the following command:
+   ```shell
+   json-server --watch db.json
+   ```
+This will start the JSON server and watch the db.json file for any changes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+:sparkles::sparkles::sparkles: Stay curious :sparkles::sparkles::sparkles:
