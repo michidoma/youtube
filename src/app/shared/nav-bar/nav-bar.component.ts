@@ -16,7 +16,7 @@ export class NavBarComponent {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.signedIn = localStorage.getItem('loggedIn') || '-1';
+    this.signedIn = localStorage.getItem('loggedIn') || '0';
     this.fullName = localStorage.getItem('fullName') || 'username';
     this.email = localStorage.getItem('email') || '@email';
 

@@ -70,11 +70,20 @@
         </button>
       </div>
       <div>
-        <span
-          [routerLink]="['/profile/signup']"
-          routerLinkActive="router-link-active"
-          ><strong>Create account</strong></span
-        >
+        <div>
+          <p
+            [routerLink]="['/profile/signup']"
+            routerLinkActive="router-link-active"
+          >
+            <strong>Create account</strong>
+          </p>
+          <p
+            [routerLink]="['/profile/signinchooser']"
+            routerLinkActive="router-link-active"
+          >
+            <strong>Choose account</strong>
+          </p>
+        </div>
         <input type="submit" value="Sign in" />
       </div>
     </form>

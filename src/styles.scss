@@ -1152,24 +1152,28 @@ body {
             }
             > div:last-child {
                 padding: 20px 0px;
-                margin-bottom: 30px;
                 display: flex;
                 justify-content: space-between;
-                span {
-                    color: #1a73e8;
-                    font-size: 14px;
-                    padding: 10px 5px;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-                span:hover {
-                    background-color: #f6f9fe;
-                    color: #174ea6;
+                align-items: center;
+                div {
+                    p {
+                        margin: 0;
+                        color: #1a73e8;
+                        font-size: 14px;
+                        padding: 10px 5px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    p:hover {
+                        background-color: #f6f9fe;
+                        color: #174ea6;
+                    }
                 }
                 input {
-                    padding: 0px 15px;
+                    padding: 8px 15px;
                     font-size: 14px;
                     color: white;
+                    height: 40px;
                     border-radius: 5px;
                     border: none;
                     background-color: #1a73e8;

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +8,7 @@ import { map } from 'rxjs';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  addUser(data: any) {
+  addUser(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/users', data);
   }
 
